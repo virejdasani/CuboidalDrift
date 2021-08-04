@@ -7,19 +7,20 @@ public class JoystickLevelConnector : MonoBehaviour
     public float movementSpeed = 100f;
 
     protected Joystick joystick;
+    protected Rigidbody rigid;
 
     void Start()
     {
-        joystick = FindObjectOfType<Joystick>();   
+        joystick = FindObjectOfType<Joystick>();
+
+        // Get the rigidbody
+        rigid = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        // Get the rigidbody
-        var rigidbody = GetComponent<Rigidbody>();
-
         // Add velocity to the rigidbody. In this game, the player is stationary at 0,0,0 and the level is moved based on joystick input
-        rigidbody.velocity = new Vector3(joystick.Horizontal * movementSpeed * -1f,
-            rigidbody.velocity.y, joystick.Vertical * movementSpeed * -1f);
+        rigid.velocity = new Vector3(joystick.Horizontal * movementSpeed,
+            rigid.velocity.y, joystick.Vertical * movementSpeed);
     }
 }
