@@ -15,7 +15,10 @@ public class JoystickLevelConnector : MonoBehaviour
 
     void Update()
     {
+        // Get the rigidbody
         var rigidbody = GetComponent<Rigidbody>();
+
+        // Add velocity to the rigidbody. In this game, the player is stationary at 0,0,0 and the level is moved based on joystick input
         rigidbody.velocity = new Vector3(joystick.Horizontal * movementSpeed * -1f,
             rigidbody.velocity.y, joystick.Vertical * movementSpeed * -1f);
     }
