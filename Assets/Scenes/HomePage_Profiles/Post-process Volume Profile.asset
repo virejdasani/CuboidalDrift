@@ -1,6 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3780126170726922871
+--- !u!114 &-8187985031333111999
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  spectralLut:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  intensity:
+    overrideState: 1
+    value: 0.35
+  fastMode:
+    overrideState: 0
+    value: 0
+--- !u!114 &-3633110314750779901
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21,7 +47,7 @@ MonoBehaviour:
     value: 1
   threshold:
     overrideState: 0
-    value: 1
+    value: 2
   softKnee:
     overrideState: 0
     value: 0.5
@@ -36,10 +62,10 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 1.7207954, g: 1.7207954, b: 1.7207954, a: 1}
   fastMode:
-    overrideState: 1
-    value: 1
+    overrideState: 0
+    value: 0
   dirtTexture:
     overrideState: 0
     value: {fileID: 0}
@@ -60,4 +86,5 @@ MonoBehaviour:
   m_Name: Post-process Volume Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: -3780126170726922871}
+  - {fileID: -3633110314750779901}
+  - {fileID: -8187985031333111999}
