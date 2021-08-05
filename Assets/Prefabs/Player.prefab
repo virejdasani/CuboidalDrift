@@ -126,8 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b7cc5207f60413e99ac476852d4ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 500
-  jumpForce: {x: 0, y: 200, z: 0}
+  TouchMovementSpeed: 500
+  touchJumpForce: {x: 0, y: 0, z: 0}
+  keyboardMovementSpeed: 50000
+  keyboardJumpForce: 5000
 --- !u!1 &4535948890084254196
 GameObject:
   m_ObjectHideFlags: 0
