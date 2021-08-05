@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     protected Joystick joystick;
     protected Rigidbody rb;
 
+    // This is because the player doesn't start on the ground. It falls on the ground when game starts
+    bool isGrounded = false;
+
     void Start()
     {
         joystick = FindObjectOfType<Joystick>();
@@ -24,18 +27,38 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector3(joystick.Horizontal * movementSpeed,
             rb.velocity.y, joystick.Vertical * movementSpeed);
 
+        // For jumping, first check if there is any touch input
         if (Input.touchCount > 0)
         {
-            if (Input.GetTouch(0).position.x > Screen.width / 2)
-            rb.AddForce(jumpForce);
-            Debug.Log("touched");
-            Debug.Log(Input.GetTouch(0).position);
+            // Now check if player is touching the ground
+            if (isGrounded)
+            {
+                // Now, check if the touch is in the right half of the screen
+                if (Input.GetTouch(Input.touchCount - 1).position.x > Screen.width / 2)
+                    // Add force to the player in the y direction
+                    rb.AddForce(jumpForce);
+            }
+
         }
 
-        // This is the touch input with mouse (left click)
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    rb.AddForce(jumpForce);
-        //}
+    }
+
+    // To detect collisions for player jumping
+    void OnCollisionEnter(Collision collision)
+    {
+        // If the player just touched a surface, isGrounded = true
+        if (collision.gameObject.tag == "Surface")
+        {
+            isGrounded = true;
+        }
+    }
+
+    // If player just exited touching a surface, isGrounded = false
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Surface")
+        {
+            isGrounded = false;
+        }
     }
 }
