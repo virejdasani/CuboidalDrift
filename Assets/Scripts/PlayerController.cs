@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        // Get the joystick
         joystick = FindObjectOfType<Joystick>();
 
         // Get the Rigidbody
@@ -26,10 +27,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Based on JoyStick input, add velocity to the rigidbody
+        // Based on JoyStick input, move the rigidbody (player)
         rb.velocity = new Vector3(joystick.Horizontal * TouchMovementSpeed * Time.deltaTime,
             rb.velocity.y, joystick.Vertical * TouchMovementSpeed * Time.deltaTime);
 
+        // Based on Keyboard input (WASD), move the rigidbody (player)
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         rb.AddForce(move * Time.deltaTime * keyboardMovementSpeed);
 
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
                     rb.AddForce(touchJumpForce);
             }
 
+            // When space bar is pressed, jump
             Vector3 jump = new Vector3(0, Input.GetAxis("Jump"), 0);
             rb.AddForce(jump * Time.deltaTime * keyboardJumpForce);
 
