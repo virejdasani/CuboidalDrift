@@ -3804,6 +3804,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4535948889778877182, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
+      propertyPath: touchJumpForce.y
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535948889778877182, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
+      propertyPath: keyboardJumpForce
+      value: 20000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535948889778877182, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
+      propertyPath: keyboardMovementSpeed
+      value: 50000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
 --- !u!1001 &5402737645347017413

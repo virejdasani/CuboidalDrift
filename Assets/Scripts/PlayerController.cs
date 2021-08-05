@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float movementSpeed = 100f;
-    public Vector3 jumpForce;
+    public float TouchMovementSpeed = 500f;
+    public Vector3 touchJumpForce;
+
+    public float keyboardMovementSpeed = 50000f;
+    public float keyboardJumpForce = 10000f;
 
     protected Joystick joystick;
     protected Rigidbody rb;
@@ -24,22 +27,31 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Based on JoyStick input, add velocity to the rigidbody
-        rb.velocity = new Vector3(joystick.Horizontal * movementSpeed,
-            rb.velocity.y, joystick.Vertical * movementSpeed);
+        rb.velocity = new Vector3(joystick.Horizontal * TouchMovementSpeed * Time.deltaTime,
+            rb.velocity.y, joystick.Vertical * TouchMovementSpeed * Time.deltaTime);
+
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        rb.AddForce(move * Time.deltaTime * keyboardMovementSpeed);
 
         // For jumping, first check if there is any touch input
-        if (Input.touchCount > 0)
+        if (isGrounded)
         {
             // Now check if player is touching the ground
-            if (isGrounded)
+            if (Input.touchCount > 0)
             {
                 // Now, check if the touch is in the right half of the screen
                 if (Input.GetTouch(Input.touchCount - 1).position.x > Screen.width / 2)
                     // Add force to the player in the y direction
-                    rb.AddForce(jumpForce);
+                    rb.AddForce(touchJumpForce);
             }
 
+            Vector3 jump = new Vector3(0, Input.GetAxis("Jump"), 0);
+            rb.AddForce(jump * Time.deltaTime * keyboardJumpForce);
+
         }
+
+
+
 
     }
 
