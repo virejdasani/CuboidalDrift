@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 265680681}
   m_Layer: 0
   m_Name: PlayCube
-  m_TagString: Untagged
+  m_TagString: PlayCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollisionHandler : MonoBehaviour
 {
@@ -8,12 +9,20 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     void Start()
     {
-        // Get the rbbody
+        // Get the rigidbody
         rb = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.name == "PlayCube")
+        {
+            SceneManager.LoadScene("Levels");
+        }
+
+        else if (collision.gameObject.name == "AboutCube")
+        {
+            SceneManager.LoadScene("About");
+        }
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4535948889778876930}
   - component: {fileID: 4535948889778876929}
   - component: {fileID: 4535948889778877182}
+  - component: {fileID: 3950366058652287595}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -127,9 +128,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TouchMovementSpeed: 500
-  touchJumpForce: {x: 0, y: 0, z: 0}
+  touchJumpForce: {x: 0, y: 350, z: 0}
   keyboardMovementSpeed: 50000
-  keyboardJumpForce: 5000
+  keyboardJumpForce: 20000
+--- !u!114 &3950366058652287595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4535948889778876928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69d13b7a444540ab95466b5ed304813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4535948890084254196
 GameObject:
   m_ObjectHideFlags: 0

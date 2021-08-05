@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Surface
+  - PlayCube
   layers:
   - Default
   - TransparentFX
