@@ -53,9 +53,6 @@ public class PlayerController : MonoBehaviour
 
         }
 
-
-
-
     }
 
     // To detect collisions for player jumping
