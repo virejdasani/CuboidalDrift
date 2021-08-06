@@ -1,0 +1,4 @@
+- Touch movement speed = 500
+- Touch jump force = 350
+- Keyboard movement speed = 50000
+- Keyboard jump force = 20000
