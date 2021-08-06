@@ -19,8 +19,8 @@ public class PlayerCollisionHandler : MonoBehaviour
         // HomePage Scene
         if (collision.gameObject.name == "PlayCube")
         {
-            // This function in from the simple fade scene asset (from store)
-            // It does this: SceneManager.LoadScene("Levels"); and also adds transition animation
+            // This (Initiate.Fade) function in from the simple fade scene asset (from asset store)
+            // It does this: "SceneManager.LoadScene("Levels");" and also adds transition animation to current scene and the scene we are transitioning to
             Initiate.Fade("Levels", Color.black, fadeSpeed);
         }
 
@@ -29,6 +29,7 @@ public class PlayerCollisionHandler : MonoBehaviour
             SceneManager.LoadScene("About");
         }
         // HomePage Scene End
+
 
         // Levels Scene
         else if (collision.gameObject.name == "BackToHomeCube")
