@@ -3,3 +3,4 @@
 - Make settings modal
 - Make levels
 - Add sound
+- Add level fence/ invis collider to blue bars
