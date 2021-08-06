@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerCollisionHandler : MonoBehaviour
 {
     protected Rigidbody rb;
+
+    // This is the transition time when changing scenes (Faster this number = less time for transition)
+    public float fadeSpeed = 2.0f;
 
     void Start()
     {
@@ -18,7 +19,9 @@ public class PlayerCollisionHandler : MonoBehaviour
         // HomePage Scene
         if (collision.gameObject.name == "PlayCube")
         {
-            SceneManager.LoadScene("Levels");
+            // This function in from the simple fade scene asset (from store)
+            // It does this: SceneManager.LoadScene("Levels"); and also adds transition animation
+            Initiate.Fade("Levels", Color.black, fadeSpeed);
         }
 
         else if (collision.gameObject.name == "AboutCube")
@@ -30,7 +33,7 @@ public class PlayerCollisionHandler : MonoBehaviour
         // Levels Scene
         else if (collision.gameObject.name == "BackToHomeCube")
         {
-            SceneManager.LoadScene("HomePage");
+            Initiate.Fade("HomePage", Color.black, fadeSpeed);
         }
         // Levels Scene End
 
