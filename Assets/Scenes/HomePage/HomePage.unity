@@ -4866,6 +4866,14 @@ PrefabInstance:
       propertyPath: fadeSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5544155543365385723, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
+      propertyPath: touchJumpForce.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544155543365385723, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
+      propertyPath: keyboardJumpForce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5544155543365385726, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.18
