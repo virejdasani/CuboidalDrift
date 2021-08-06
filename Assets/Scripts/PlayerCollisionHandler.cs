@@ -15,6 +15,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        // HomePage Scene
         if (collision.gameObject.name == "PlayCube")
         {
             SceneManager.LoadScene("Levels");
@@ -24,5 +25,15 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             SceneManager.LoadScene("About");
         }
+        // HomePage Scene End
+
+        // Levels Scene
+        else if (collision.gameObject.name == "BackToHomeCube")
+        {
+            SceneManager.LoadScene("HomePage");
+        }
+        // Levels Scene End
+
+
     }
 }
