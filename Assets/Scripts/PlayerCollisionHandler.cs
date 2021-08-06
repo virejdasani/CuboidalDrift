@@ -36,6 +36,11 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             Initiate.Fade("HomePage", Color.black, fadeSpeed);
         }
+
+        else if (collision.gameObject.name == "Level1Cube")
+        {
+            Initiate.Fade("Level1", Color.black, fadeSpeed);
+        }
         // Levels Scene End
 
 

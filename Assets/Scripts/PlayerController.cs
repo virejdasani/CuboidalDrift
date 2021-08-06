@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float TouchMovementSpeed = 500f;
+    public float TouchMovementSpeed = 600f;
     public Vector3 touchJumpForce;
 
     public float keyboardMovementSpeed = 50000f;
