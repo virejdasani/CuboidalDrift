@@ -17,22 +17,17 @@ public class PlayerCollisionHandler : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // HomePage Scene
-        if (collision.gameObject.name == "PlayCube")
+        if (collision.gameObject.name == "AboutCube")
         {
             // This (Initiate.Fade) function in from the simple fade scene asset (from asset store)
             // It does this: "SceneManager.LoadScene("Levels");" and also adds transition animation to current scene and the scene we are transitioning to
-            Initiate.Fade("Levels", Color.black, fadeSpeed);
-        }
-
-        else if (collision.gameObject.name == "AboutCube")
-        {
-            SceneManager.LoadScene("About");
+            Initiate.Fade("About", Color.black, fadeSpeed);
         }
         // HomePage Scene End
 
 
         // Levels Scene
-        else if (collision.gameObject.name == "BackToHomeCube")
+        else if (collision.gameObject.name == "GoToHomeCube")
         {
             Initiate.Fade("HomePage", Color.black, fadeSpeed);
         }
@@ -44,5 +39,18 @@ public class PlayerCollisionHandler : MonoBehaviour
         // Levels Scene End
 
 
+        // Universal Cubes
+        else if (collision.gameObject.name == "GoToLevelsCube")
+        {
+            Initiate.Fade("Levels", Color.black, fadeSpeed);
+        }
+        // Universal Cubes End
+
+
+        // Obstacle
+        else if (collision.gameObject.tag == "Obstacle")
+        {
+            // Break player and restart
+        }
     }
 }
