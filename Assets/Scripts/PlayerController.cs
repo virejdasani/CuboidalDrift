@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     protected Rigidbody rb;
 
     // This is because the player doesn't start on the ground. It falls on the ground when game starts
-    bool isGrounded = false;
+    //bool isGrounded = false;
 
     void Start()
     {

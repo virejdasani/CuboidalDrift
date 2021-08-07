@@ -25,7 +25,7 @@ public class TimeScore : MonoBehaviour
         thisScore = 0.0f;
 
         // This works like localStorage.getItem(). The key is highScore+thisSceneName so that we can store different highscores for different levels. We have to set thisSceneName from the unity editor. The key would look like this: "highScoreLevel1" for level 1
-        highScore = PlayerPrefs.GetFloat("highScore" + thisSceneName);
+        highScore = PlayerPrefs.GetFloat("highscore" + thisSceneName);
 
         // We set the highscore to 1 d.p. It looks like this: "BEST TIME: 13.8"
         highScoreText.text = "BEST TIME: " + highScore.ToString("f1");
@@ -48,11 +48,11 @@ public class TimeScore : MonoBehaviour
         // Check if player hit the finishCube
         if (collision.gameObject.tag == "FinishCube")
         {
-            // Check if new highScore. The highScore is the time taken to complete the level. So, lower time is better.
-            if (thisScore < highScore)
+            // Check if new highScore. The highScore is the time taken to complete the level. So, lower time is better. If highScore == 0, this means the level hasn't been completed even once yet.
+            if (thisScore < highScore || highScore == 0)
             {
                 // Save the new highScore
-                PlayerPrefs.SetFloat("highScore" + thisSceneName, thisScore);
+                PlayerPrefs.SetFloat("highscore" + thisSceneName, thisScore);
             }
 
         }
