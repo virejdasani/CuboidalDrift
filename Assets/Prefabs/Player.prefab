@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5544155543365385722}
   - component: {fileID: 5544155543365385723}
   - component: {fileID: 5544155543365385720}
+  - component: {fileID: 6115259862183923745}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -128,9 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TouchMovementSpeed: 600
-  touchJumpForce: {x: 0, y: 350, z: 0}
   keyboardMovementSpeed: 50000
-  keyboardJumpForce: 20000
 --- !u!114 &5544155543365385720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +143,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 2
+--- !u!114 &6115259862183923745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544155543365385721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40bee1588382f46199492c3428b07da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeSize: 0.2
+  cubesInRow: 5
+  explosionForce: 50
+  explosionRadius: 4
+  explosionUpward: 0.4
 --- !u!1 &5544155544367362779
 GameObject:
   m_ObjectHideFlags: 0

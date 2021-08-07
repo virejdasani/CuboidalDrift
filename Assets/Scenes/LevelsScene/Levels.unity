@@ -1078,7 +1078,7 @@ GameObject:
   - component: {fileID: 184540379}
   - component: {fileID: 184540378}
   m_Layer: 0
-  m_Name: Level1Cube
+  m_Name: GoToLevel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1463,7 +1463,7 @@ GameObject:
   - component: {fileID: 265680682}
   - component: {fileID: 265680681}
   m_Layer: 0
-  m_Name: Level2Cube
+  m_Name: GoToLevel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1558,7 +1558,7 @@ GameObject:
   - component: {fileID: 269845271}
   - component: {fileID: 269845270}
   m_Layer: 0
-  m_Name: Level6Cube
+  m_Name: GoToLevel6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2763,7 +2763,7 @@ GameObject:
   - component: {fileID: 615998514}
   - component: {fileID: 615998513}
   m_Layer: 0
-  m_Name: Level7Cube
+  m_Name: GoToLevel7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3078,7 +3078,7 @@ GameObject:
   - component: {fileID: 702117828}
   - component: {fileID: 702117827}
   m_Layer: 0
-  m_Name: Level4Cube
+  m_Name: GoToLevel4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3173,7 +3173,7 @@ GameObject:
   - component: {fileID: 714671732}
   - component: {fileID: 714671731}
   m_Layer: 0
-  m_Name: Level3Cube
+  m_Name: GoToLevel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6913,7 +6913,7 @@ GameObject:
   - component: {fileID: 2055067685}
   - component: {fileID: 2055067684}
   m_Layer: 0
-  m_Name: Level5Cube
+  m_Name: GoToLevel5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

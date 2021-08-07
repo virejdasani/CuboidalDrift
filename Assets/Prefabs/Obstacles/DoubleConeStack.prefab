@@ -657,9 +657,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3975485636993852288}
+  - component: {fileID: 1348168872314031353}
   m_Layer: 0
   m_Name: DoubleConeStack
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -680,6 +681,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1348168872314031353
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3975485636993852291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.32405555, y: 0.50742763, z: 0.30110666}
+  m_Center: {x: -0.006706685, y: 0.4476067, z: 0.013590589}
 --- !u!1 &3986543858856078284
 GameObject:
   m_ObjectHideFlags: 0
