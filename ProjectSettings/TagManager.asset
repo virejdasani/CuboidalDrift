@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Surface
   - Obstacle
+  - FinishCube
   layers:
   - Default
   - TransparentFX

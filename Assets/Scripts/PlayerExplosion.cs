@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// This is used to create the breaking explosion when player dies
+// From this video: https://www.youtube.com/watch?v=s_v9JnTDCCY
 public class PlayerExplosion : MonoBehaviour
 {
     public string thisSceneName;
