@@ -24,6 +24,15 @@ public class PlayerExplosion : MonoBehaviour
 
     }
 
+    void FixedUpdate()
+    {
+        if (gameObject.transform.position.y < -10.0f)
+        {
+            // Reload the same level
+            Initiate.Fade(thisSceneName, Color.black, 0.5f);
+        }
+    }
+
     private void OnCollisionEnter(Collision collide)
     {
         if (collide.gameObject.tag == "Obstacle")
