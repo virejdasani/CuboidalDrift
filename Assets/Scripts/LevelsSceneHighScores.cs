@@ -12,6 +12,7 @@ public class LevelsSceneHighScores : MonoBehaviour
 
     void Start()
     {
+        // This sets the text in the scene to something like: "BEST: 10.3s"
         level1HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel1").ToString("f1") + "s";
         level2HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel2").ToString("f1") + "s";
         level3HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel3").ToString("f1") + "s";
