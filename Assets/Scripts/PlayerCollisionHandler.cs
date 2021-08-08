@@ -18,36 +18,43 @@ public class PlayerCollisionHandler : MonoBehaviour
     {
         if (collision.gameObject.name == "AboutCube")
         {
-            // This (Initiate.Fade) function in from the simple fade scene asset (from asset store)
-            // It does this: "SceneManager.LoadScene("Levels");" and also adds transition animation to current scene and the scene we are transitioning to
-            Initiate.Fade("About", Color.black, fadeSpeed);
+
+            LoadScene("About");
         }
 
         else if (collision.gameObject.name == "GoToHomeCube")
         {
-            Initiate.Fade("HomePage", Color.black, fadeSpeed);
+            LoadScene("HomePage");
         }
 
         else if (collision.gameObject.name == "GoToLevelsCube")
         {
-            Initiate.Fade("Levels", Color.black, fadeSpeed);
+            LoadScene("Levels");
         }
 
         // Levels
         else if (collision.gameObject.name == "GoToLevel1")
         {
-            Initiate.Fade("Level1", Color.black, fadeSpeed);
+            LoadScene("Level1");
         }
 
         else if (collision.gameObject.name == "GoToLevel2")
         {
-            Initiate.Fade("Level2", Color.black, fadeSpeed);
+            LoadScene("Level2");
         }
 
         else if (collision.gameObject.name == "GoToLevel3")
         {
-            Initiate.Fade("Level3", Color.black, fadeSpeed);
+            LoadScene("Level3");
         }
+    }
+
+    // This transitions to the passed in scene
+    private void LoadScene(string sceneName)
+    {
+        // This (Initiate.Fade) function in from the Simple Fade Scene asset (from asset store)
+        // It does this: "SceneManager.LoadScene("Levels");" and also adds transition animation to current scene and the scene we are transitioning to
+        Initiate.Fade(sceneName, Color.black, fadeSpeed);
     }
 
 
