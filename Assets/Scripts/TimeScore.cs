@@ -4,7 +4,7 @@ using TMPro;
 public class TimeScore : MonoBehaviour
 {
     // In every level, there are 4 TextMeshPros
-    // 2 at the start, 2 at the finish. They show the time passed and lowest time to complete that level
+    // 2 at the start, 2 at the finish. They show the time passed and lowest time that was to complete that level (highscore)
     public TextMeshPro thisScoreText;
     public TextMeshPro highScoreText;
     public TextMeshPro thisScoreText2;
