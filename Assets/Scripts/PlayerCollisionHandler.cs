@@ -47,6 +47,11 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             LoadScene("Level3");
         }
+
+        else if (collision.gameObject.name == "GoToLevel4")
+        {
+            LoadScene("Level4");
+        }
     }
 
     // This transitions to the passed in scene
