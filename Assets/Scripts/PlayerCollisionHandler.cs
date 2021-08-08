@@ -44,6 +44,11 @@ public class PlayerCollisionHandler : MonoBehaviour
             Initiate.Fade("Level2", Color.black, fadeSpeed);
         }
 
+        else if (collision.gameObject.name == "GoToLevel3")
+        {
+            Initiate.Fade("Level3", Color.black, fadeSpeed);
+        }
+
     }
 
 
