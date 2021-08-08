@@ -31,9 +31,14 @@ public class TimeScore : MonoBehaviour
         // This works like localStorage.getItem(). The key is highScore+thisSceneName so that we can store different highscores for different levels. We have to set thisSceneName from the unity editor. The key would look like this: "highScoreLevel1" for level 1
         highScore = PlayerPrefs.GetFloat("highScore" + thisSceneName);
 
-        // We set the highscore to 1 d.p. It looks like this: "BEST TIME: 13.8"
-        highScoreText.text = "BEST TIME: " + highScore.ToString("f1");
-        highScoreText2.text = "BEST TIME: " + highScore.ToString("f1");
+        // Check if the text object where we display the highscore time, exists. It only exists in levels and not in scenes like homepage. Without checking this, there is are 2 errors thrown per scene
+        if (highScoreText && highScoreText2)
+        {
+            // We set the highscore to 1 d.p. It looks like this: "BEST TIME: 13.8"
+            highScoreText.text = "BEST TIME: " + highScore.ToString("f1");
+            highScoreText2.text = "BEST TIME: " + highScore.ToString("f1");
+        }
+
     }
 
     void Update()
