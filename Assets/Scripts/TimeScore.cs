@@ -15,9 +15,13 @@ public class TimeScore : MonoBehaviour
     private float thisScore;
     private float highScore;
     private float startTime;
+    private bool levelComplete;
 
     void Start()
     {
+        // This bool is needed so we know when to stop thisScoreText from increasing
+        levelComplete = false;
+
         // This is the time when the scene starts
         startTime = Time.time;
 
@@ -37,9 +41,18 @@ public class TimeScore : MonoBehaviour
         // This is the current score/time. It is basically the start time - the current time = time elapsed
         thisScore = Time.time - startTime;
 
-        // This time text is updated in realtime, unlike the highscore
-        thisScoreText.text = "TIME: " + thisScore.ToString("f1");
-        thisScoreText2.text = "TIME: " + thisScore.ToString("f1");
+        // If the level is not finished
+        if (!levelComplete)
+        {
+            // Check if the text object where we display the time, exists. It only exists in levels and not in scenes like homepage. Without checking this, there is are infinite errors thrown
+            if (thisScoreText && thisScoreText2)
+            {
+                // This time text is updated in realtime, unlike the highscore
+                thisScoreText.text = "TIME: " + thisScore.ToString("f1");
+                thisScoreText2.text = "TIME: " + thisScore.ToString("f1");
+            }
+        }
+
     }
 
     // This is so that when the playerCube hits the finishCube, we can check if the timeScore this attempt was lesser than the highScore. If it is, we have a new highScore. 
@@ -48,6 +61,9 @@ public class TimeScore : MonoBehaviour
         // Check if player hit the finishCube
         if (collision.gameObject.tag == "FinishCube")
         {
+            // When this becomes true, the timer stops updating the time elapsed
+            levelComplete = true;
+
             // Check if new highScore. The highScore is the time taken to complete the level. So, lower time is better. If highScore == 0, this means the level hasn't been completed even once yet.
             if (thisScore < highScore || highScore == 0)
             {
