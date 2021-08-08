@@ -48,7 +48,6 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             Initiate.Fade("Level3", Color.black, fadeSpeed);
         }
-
     }
 
 
