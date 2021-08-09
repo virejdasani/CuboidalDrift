@@ -7005,6 +7005,14 @@ PrefabInstance:
       propertyPath: keyboardJumpForce
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5544155543365385723, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
+      propertyPath: TouchMovementSpeed
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544155543365385723, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
+      propertyPath: keyboardMovementSpeed
+      value: 60000
+      objectReference: {fileID: 0}
     - target: {fileID: 5544155543365385726, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
       propertyPath: m_RootOrder
       value: 0
