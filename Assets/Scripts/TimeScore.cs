@@ -15,12 +15,17 @@ public class TimeScore : MonoBehaviour
     private float thisScore;
     private float highScore;
     private float startTime;
+
     private bool levelComplete;
+    private bool playerOnSurface;
 
     void Start()
     {
         // This bool is needed so we know when to stop thisScoreText from increasing
         levelComplete = false;
+
+        // This is needed so we know when to start the timer (as soon as the player hits the surface)
+        playerOnSurface = false;
 
         // This is the time when the scene starts
         startTime = Time.time;
@@ -43,14 +48,14 @@ public class TimeScore : MonoBehaviour
 
     void Update()
     {
-        // This is the current score/time. It is basically the start time - the current time = time elapsed
-        thisScore = Time.time - startTime;
-
-        // If the level is not finished
-        if (!levelComplete)
+        // Check if the player has hit the surface and check if the text objects where we display the time, exist. They only exists in levels and not in scenes like homepage. Without checking this, there are errors thrown constantly
+        if (playerOnSurface && thisScoreText && thisScoreText2)
         {
-            // Check if the text object where we display the time, exists. It only exists in levels and not in scenes like homepage. Without checking this, there is are infinite errors thrown
-            if (thisScoreText && thisScoreText2)
+            // This is the current score/time. It is basically the start time - the current time = time elapsed
+            thisScore = Time.time - startTime;
+
+            // If the level is not finished. If the level is complete, we don't want the timer to keep increasing
+            if (!levelComplete)
             {
                 // This time text is updated in realtime, unlike the highscore
                 thisScoreText.text = "TIME: " + thisScore.ToString("f1");
@@ -77,5 +82,11 @@ public class TimeScore : MonoBehaviour
             }
 
         }
+
+        if (collision.gameObject.tag == "Surface")
+        {
+            playerOnSurface = true;
+        }
+
     }
 }
