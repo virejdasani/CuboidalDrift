@@ -6,6 +6,9 @@ public class PlayerExplosion : MonoBehaviour
 {
     public string thisSceneName;
 
+    public AudioSource obstacleCollisionSound;
+    private bool isSoundPlayed;
+
     public float cubeSize = 0.2f;
     public int cubesInRow = 5;
 
@@ -24,6 +27,9 @@ public class PlayerExplosion : MonoBehaviour
         //use this value to create pivot vector)
         cubesPivot = new Vector3(cubesPivotDistance, cubesPivotDistance, cubesPivotDistance);
 
+        // This is needed so that the same sound is not played multiple times
+        isSoundPlayed = false;
+
     }
 
     void FixedUpdate()
@@ -40,6 +46,17 @@ public class PlayerExplosion : MonoBehaviour
         if (collide.gameObject.tag == "Obstacle")
         {
             Explode();
+
+            // Check if the sound has already been played. This collision sound should be played only once
+            if (!isSoundPlayed)
+            {
+                // Play the collision sound
+                obstacleCollisionSound.Play();
+
+                // Set it to true so it doesn't loop when player is still colliding with obstacle
+                isSoundPlayed = true;
+            }
+
             // Reload the same level
             Initiate.Fade(thisSceneName, Color.black, 0.5f);
         }
