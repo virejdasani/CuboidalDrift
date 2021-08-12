@@ -9,7 +9,6 @@ public class PlayerCollisionHandler : MonoBehaviour
     public float fadeSpeed = 2.0f;
 
     public GameObject AboutModal;
-
     private bool modalIsVisible;
 
     void Start()
@@ -22,7 +21,6 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             // At the start, we dont show the about modal
             AboutModal.gameObject.SetActive(false);
-
             modalIsVisible = false;
 
         }
@@ -32,8 +30,11 @@ public class PlayerCollisionHandler : MonoBehaviour
     {
         if (modalIsVisible)
         {
+
+            // Check if there is a touch or click on screen
             if (Input.GetMouseButtonDown(0))
             {
+                // Hide the modal
                 AboutModal.gameObject.SetActive(false);
                 modalIsVisible = false;
             }
@@ -41,8 +42,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     }
 
-
-        private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
 
         if (collision.gameObject.name == "GoToHomeCube")
@@ -93,7 +93,7 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "AboutCube")
         {
-            // When the user hits the about cube, the modal pops up by rendering the canvas that was previously set to not active
+            // When the user hits the about cube, the modal pops up by unhiding the canvas that was previously set to hidden = SetActive(false);
             AboutModal.gameObject.SetActive(true);
             modalIsVisible = true;
         }
