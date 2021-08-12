@@ -18,7 +18,6 @@ public class PlayerCollisionHandler : MonoBehaviour
     {
         if (collision.gameObject.name == "AboutCube")
         {
-
             LoadScene("About");
         }
 
@@ -56,6 +55,16 @@ public class PlayerCollisionHandler : MonoBehaviour
         else if (collision.gameObject.name == "GoToLevel5")
         {
             LoadScene("Level5");
+        }
+
+        else if (collision.gameObject.name == "LastLevelFinishCube")
+        {
+            LoadScene("MoreLevelsComingSoon");
+        }
+
+        if (collision.gameObject.name == "GitHubCube")
+        {
+            Application.OpenURL("http://github.com/virejdasani/CuboidalDrift");
         }
     }
 

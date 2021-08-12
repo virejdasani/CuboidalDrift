@@ -1,5 +1,4 @@
-- Change game name
 - Make about scene
 - Make settings modal
-- Make levels
 - Add sound
+- Make more levels

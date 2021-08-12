@@ -3,6 +3,7 @@
 - Re-Add time scores TMP objects in the TimeScore script
 - Add ThisSceneName in the TimeScore script and in the PlayerExplosion script
 - Change the name of the nextLevelCube
+- To get proper lighting, go to window->rendering->lighting. Click new lighting settings and check the auto generate box
 
 ## Piston animation
 - Piston comes all the way out at 60 frames
