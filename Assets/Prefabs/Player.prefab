@@ -178,6 +178,7 @@ MonoBehaviour:
   highScoreText: {fileID: 0}
   thisScoreText2: {fileID: 0}
   highScoreText2: {fileID: 0}
+  thisSceneName: 
 --- !u!1 &5544155544367362779
 GameObject:
   m_ObjectHideFlags: 0
