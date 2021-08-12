@@ -9,7 +9,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     public float fadeSpeed = 2.0f;
 
     public GameObject AboutModal;
-    private bool modalIsVisible;
+    public GameObject SettingsModal;
 
     void Start()
     {
@@ -21,25 +21,14 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             // At the start, we dont show the about modal
             AboutModal.gameObject.SetActive(false);
-            modalIsVisible = false;
-
         }
-    }
 
-    private void Update()
-    {
-        if (modalIsVisible)
+        // If settings modal exists in this scene
+        if (SettingsModal)
         {
-
-            // Check if there is a touch or click on screen
-            if (Input.GetMouseButtonDown(0))
-            {
-                // Hide the modal
-                AboutModal.gameObject.SetActive(false);
-                modalIsVisible = false;
-            }
+            // At the start, we dont show the settings modal
+            SettingsModal.gameObject.SetActive(false);
         }
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -76,11 +65,6 @@ public class PlayerCollisionHandler : MonoBehaviour
             LoadScene("Level4");
         }
 
-        else if (collision.gameObject.name == "GoToLevel5")
-        {
-            LoadScene("Level5");
-        }
-
         else if (collision.gameObject.name == "LastLevelFinishCube")
         {
             LoadScene("MoreLevelsComingSoon");
@@ -95,7 +79,12 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             // When the user hits the about cube, the modal pops up by unhiding the canvas that was previously set to hidden = SetActive(false);
             AboutModal.gameObject.SetActive(true);
-            modalIsVisible = true;
+        }
+
+        else if (collision.gameObject.name == "SettingsCube")
+        {
+            // When the user hits the settings cube, the modal pops up by unhiding the canvas that was previously set to hidden = SetActive(false);
+            SettingsModal.gameObject.SetActive(true);
         }
     }
 
