@@ -1,3 +1,1 @@
-- Make about scene
-- Make settings modal
-- Make more levels
+Add more levels
