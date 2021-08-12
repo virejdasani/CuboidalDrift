@@ -1,1 +1,2 @@
-Add more levels
+- Add more levels
+- Restrict level access if previous levels aren't completed
