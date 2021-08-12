@@ -1,4 +1,3 @@
 - Make about scene
 - Make settings modal
-- Add sound
 - Make more levels
