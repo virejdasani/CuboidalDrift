@@ -18,6 +18,7 @@ public class TimeScore : MonoBehaviour
 
     private bool levelComplete;
     private bool playerOnSurface;
+    private bool isTimerStarted;
 
     void Start()
     {
@@ -27,8 +28,8 @@ public class TimeScore : MonoBehaviour
         // This is needed so we know when to start the timer (as soon as the player hits the surface)
         playerOnSurface = false;
 
-        // This is the time when the scene starts
-        startTime = Time.time;
+        // This is so that once the timer is started, we don't restart it everytime we hit a surface
+        isTimerStarted = false;
 
         // The initial score is 0.0(seconds)
         thisScore = 0.0f;
@@ -86,6 +87,15 @@ public class TimeScore : MonoBehaviour
         if (collision.gameObject.tag == "Surface")
         {
             playerOnSurface = true;
+
+            if (!isTimerStarted)
+            {
+                // This is the time when the player hits the surface starts
+                startTime = Time.time;
+
+                // Once the startTime is set, we set isTimerStarted to true so that we don't reset it
+                isTimerStarted = true;
+            }
         }
 
     }
