@@ -8,20 +8,44 @@ public class PlayerCollisionHandler : MonoBehaviour
     // This is the transition time when changing scenes (Faster this number = less time for transition)
     public float fadeSpeed = 2.0f;
 
+    public GameObject AboutModal;
+
+    private bool modalIsVisible;
+
     void Start()
     {
         // Get the rigidbody
         rb = GetComponent<Rigidbody>();
+
+        // If about modal exists in this scene
+        if (AboutModal)
+        {
+            // At the start, we dont show the about modal
+            AboutModal.gameObject.SetActive(false);
+
+            modalIsVisible = false;
+
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void Update()
     {
-        if (collision.gameObject.name == "AboutCube")
+        if (modalIsVisible)
         {
-            LoadScene("About");
+            if (Input.GetMouseButtonDown(0))
+            {
+                AboutModal.gameObject.SetActive(false);
+                modalIsVisible = false;
+            }
         }
 
-        else if (collision.gameObject.name == "GoToHomeCube")
+    }
+
+
+        private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.name == "GoToHomeCube")
         {
             LoadScene("HomePage");
         }
@@ -62,9 +86,16 @@ public class PlayerCollisionHandler : MonoBehaviour
             LoadScene("MoreLevelsComingSoon");
         }
 
-        if (collision.gameObject.name == "GitHubCube")
+        else if (collision.gameObject.name == "GitHubCube")
         {
             Application.OpenURL("http://github.com/virejdasani/CuboidalDrift");
+        }
+
+        else if (collision.gameObject.name == "AboutCube")
+        {
+            // When the user hits the about cube, the modal pops up by rendering the canvas that was previously set to not active
+            AboutModal.gameObject.SetActive(true);
+            modalIsVisible = true;
         }
     }
 
