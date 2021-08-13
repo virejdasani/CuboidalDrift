@@ -19,3 +19,6 @@
 - Make the platform, that is in the direction the player is supposed to go, a little lower than the platform the player is currently in. This will remove the player being stuck
 - Make sure to have the player < 1 y on the surface. When it is above 1 y, it can't move 
 - Make sure to tag the starting platform 'Surface'. Without this, the timer won't start
+
+## Notes
+- The `PreviewScene` is to get assets like the app logo, preview banner etc.
