@@ -1,0 +1,6 @@
+Cuboidal Drift
+
+Cuboidal Drift is a casual, fun game where you have to reach the end!
+
+Cuboidal Drift is a casual, fun game where you play as a cube and your objective is to complete levels and not exlpode to dangerous spikes!
+This game is completely open source so you too can contribute to the game by doing stuff like adding new levels!
