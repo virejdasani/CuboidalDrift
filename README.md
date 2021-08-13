@@ -1,3 +1,2 @@
 # CuboidalDrift
-An Open Source 3D game made with Unity
-
+A casual, opensource indie game made with Unity
