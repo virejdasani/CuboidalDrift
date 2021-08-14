@@ -20,5 +20,11 @@
 - Make sure to have the player < 1 y on the surface. When it is above 1 y, it can't move 
 - Make sure to tag the starting platform 'Surface'. Without this, the timer won't start
 
+## Platform Switching
+- Change the prefabs->light->main light intensity from 1 to 0.8
+- Change the prefabs->CubeButtons->FinishLine->point light from 3 to 0.15
+- Go to JoystickPack->Prefabs->FixedJoystick-> Uncheck image from both the fixed joystick and its child, handle. Also uncheck the FixedJoystick script
+- Go to build settings -> player settings -> resolution and presentation. Choose full-screen mode = windowed. W/H = 1152/648
+
 ## Notes
 - The `PreviewScene` is to get assets like the app logo, preview banner etc.
