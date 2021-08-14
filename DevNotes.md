@@ -24,7 +24,8 @@
 - Change the prefabs->light->main light intensity from 1 to 0.8
 - Change the prefabs->CubeButtons->FinishLine->point light from 3 to 0.15
 - Go to JoystickPack->Prefabs->FixedJoystick-> Uncheck image from both the fixed joystick and its child, handle. Also uncheck the FixedJoystick script
-- Go to build settings -> player settings -> resolution and presentation. Choose full-screen mode = windowed. W/H = 1152/648
+- Go to build settings -> player settings -> resolution and presentation. Choose full-screen mode = windowed. W/H = 1024/576
+- In player settings, change the default logo to desktopLogo or logo for mobile
 
 ## Notes
 - The `PreviewScene` is to get assets like the app logo, preview banner etc.
