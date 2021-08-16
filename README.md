@@ -2,7 +2,7 @@
 A casual, fun, opensource indie game made with Unity
 
 ## Download
-- [Google Play Store](https://play.google.com/store/apps/details?id=com.VirejDasani.CuboidalDrift)
+- [Google PlayStore](https://play.google.com/store/apps/details?id=com.VirejDasani.CuboidalDrift)
 - [itch.io](https://virejdasani.itch.io/cuboidaldrift)
 
 ![](https://raw.githubusercontent.com/virejdasani/CuboidalDrift/master/StoreAssets/banner.png)
