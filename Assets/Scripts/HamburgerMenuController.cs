@@ -8,6 +8,7 @@ public class HamburgerMenuController : MonoBehaviour
 
     public void OpenSettings()
     {
+        // This toggles the settings modal with the hamburger menu button
         if (!settingsActive)
         {
             // Show the modal
