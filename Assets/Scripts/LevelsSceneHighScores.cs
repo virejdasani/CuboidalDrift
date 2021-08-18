@@ -27,14 +27,11 @@ public class LevelsSceneHighScores : MonoBehaviour
             level3HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel3").ToString("f1") + "s";
             level4HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel4").ToString("f1") + "s";
 
-            // This part is to check which levels the player can access, depending on what levels they have completed
+            // This part is to check which levels the player can access, depending on the previous levels they have completed
             // Check if the highScore for Level1 is == 0.0 If it is, then level1 is incomplete
             if (PlayerPrefs.GetFloat("highScoreLevel1").ToString("f1") == "0.0")
             {
-                // Because this level has highscore of 0.0, we set its status to incomplete in PlayerPrefs
-                PlayerPrefs.SetString("level1Incomplete", "incomplete");
-
-                // Now, we take all the cubes after the incomplete level and set them to the disabled color
+                // We take all the cubes after the last incomplete level and set them to the disabled color
                 level2Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level3Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level4Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
@@ -42,15 +39,18 @@ public class LevelsSceneHighScores : MonoBehaviour
 
             else if (PlayerPrefs.GetFloat("highScoreLevel2").ToString("f1") == "0.0")
             {
-                PlayerPrefs.SetString("level2Incomplete", "incomplete");
                 level3Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level4Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             else if (PlayerPrefs.GetFloat("highScoreLevel3").ToString("f1") == "0.0")
             {
-                PlayerPrefs.SetString("level3Incomplete", "incomplete");
                 level4Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+            }
+
+            else if (PlayerPrefs.GetFloat("highScoreLevel4").ToString("f1") == "0.0")
+            {
+                //level5Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
         }
