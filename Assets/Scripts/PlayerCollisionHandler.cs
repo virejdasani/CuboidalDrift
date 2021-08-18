@@ -52,17 +52,23 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "GoToLevel2")
         {
-            LoadScene("Level2");
+            // In the levelsScene, PlayerPrefs.GetString(level1Status) will return "incomplete" if the previous level isn't completed. If this happens, we must prevent player from accessing this level. However, the GoToLevel2 cube is also found at the end of level1 with a tag of "FinishCube". If player touches this cube, let the player go to the next level
+            if (!PlayerPrefs.HasKey("level1Incomplete") || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level2");
         }
 
         else if (collision.gameObject.name == "GoToLevel3")
         {
-            LoadScene("Level3");
+            // In the levelsScene, PlayerPrefs.GetString(level2Status) will return "incomplete" if the previous level isn't completed. If this happens, we must prevent player from accessing this level. However, the GoToLevel3 cube is also found at the end of level1 with a tag of "FinishCube". If player touches this cube, let the player go to the next level
+            if (!PlayerPrefs.HasKey("level2Incomplete") || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level3");
         }
 
         else if (collision.gameObject.name == "GoToLevel4")
         {
-            LoadScene("Level4");
+            // In the levelsScene, PlayerPrefs.GetString(level3Status) will return "incomplete" if the previous level isn't completed. If this happens, we must prevent player from accessing this level. However, the GoToLevel4 cube is also found at the end of level1 with a tag of "FinishCube". If player touches this cube, let the player go to the next level
+            if (!PlayerPrefs.HasKey("level3Incomplete") || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level4");
         }
 
         else if (collision.gameObject.name == "LastLevelFinishCube")

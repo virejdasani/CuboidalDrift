@@ -4,6 +4,7 @@
 - Add ThisSceneName in the TimeScore script and in the PlayerExplosion script
 - Change the name of the nextLevelCube
 - To get proper lighting, go to window->rendering->lighting. Click new lighting settings and check the auto generate box
+- In `LevelsSceneHighScores.cs` and `PlayerCollisionHandler.cs` add the new level in the appropriate areas
 
 ## Piston animation
 - Piston comes all the way out at 60 frames
@@ -29,3 +30,4 @@
 
 ## Notes
 - The `PreviewScene` is to get assets like the app logo, preview banner etc.
+- When changing platform, if the scenes look too bright, lower the bloom in the global post-process volume
