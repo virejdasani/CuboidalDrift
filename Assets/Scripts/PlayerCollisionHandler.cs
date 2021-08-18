@@ -44,6 +44,14 @@ public class PlayerCollisionHandler : MonoBehaviour
             LoadScene("Levels");
         }
 
+        else if (collision.gameObject.name == "GoToLevels2Cube")
+        {
+            // This is the page 2 of the levels scene
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel4").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Levels2");
+        }
+
         // Levels
         else if (collision.gameObject.name == "GoToLevel1")
         {
@@ -69,6 +77,32 @@ public class PlayerCollisionHandler : MonoBehaviour
             // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
             if (PlayerPrefs.GetFloat("highScoreLevel3").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
                 LoadScene("Level4");
+        }
+
+        else if (collision.gameObject.name == "GoToLevel5")
+        {
+            LoadScene("Level5");
+        }
+
+        else if (collision.gameObject.name == "GoToLevel6")
+        {
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel5").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level6");
+        }
+
+        else if (collision.gameObject.name == "GoToLevel7")
+        {
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel6").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level7");
+        }
+
+        else if (collision.gameObject.name == "GoToLevel8")
+        {
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel7").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level8");
         }
 
         else if (collision.gameObject.name == "LastLevelFinishCube")

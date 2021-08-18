@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 166160337}
   - component: {fileID: 166160336}
   m_Layer: 0
-  m_Name: Level4
+  m_Name: Level8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,9 +445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '4
-
-'
+  m_text: 8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
   m_sharedMaterial: {fileID: -6412188900274110264, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
@@ -573,7 +571,7 @@ GameObject:
   - component: {fileID: 184540379}
   - component: {fileID: 184540378}
   m_Layer: 0
-  m_Name: GoToLevel1
+  m_Name: GoToLevel5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -958,7 +956,7 @@ GameObject:
   - component: {fileID: 265680682}
   - component: {fileID: 265680681}
   m_Layer: 0
-  m_Name: GoToLevel2
+  m_Name: GoToLevel6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1624,7 +1622,7 @@ GameObject:
   - component: {fileID: 579981173}
   - component: {fileID: 579981172}
   m_Layer: 0
-  m_Name: Level1
+  m_Name: Level5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1669,9 +1667,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1
-
-'
+  m_text: 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
   m_sharedMaterial: {fileID: -6412188900274110264, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
@@ -2112,23 +2108,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572c26b3a50c64b19bbf2f6fd6118131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level1HighScoreText: {fileID: 1877044205}
-  level2HighScoreText: {fileID: 1102155371}
-  level3HighScoreText: {fileID: 1504026373}
-  level4HighScoreText: {fileID: 1380089742}
-  level5HighScoreText: {fileID: 0}
-  level6HighScoreText: {fileID: 0}
-  level7HighScoreText: {fileID: 0}
-  level8HighScoreText: {fileID: 0}
-  level1Cube: {fileID: 184540376}
-  level2Cube: {fileID: 265680679}
-  level3Cube: {fileID: 714671729}
-  level4Cube: {fileID: 702117825}
-  level5Cube: {fileID: 0}
-  level6Cube: {fileID: 0}
-  level7Cube: {fileID: 0}
-  level8Cube: {fileID: 0}
-  goToNextPageCube: {fileID: 1544765260}
+  level1HighScoreText: {fileID: 0}
+  level2HighScoreText: {fileID: 0}
+  level3HighScoreText: {fileID: 0}
+  level4HighScoreText: {fileID: 0}
+  level5HighScoreText: {fileID: 1877044205}
+  level6HighScoreText: {fileID: 1102155371}
+  level7HighScoreText: {fileID: 1504026373}
+  level8HighScoreText: {fileID: 1380089742}
+  level1Cube: {fileID: 0}
+  level2Cube: {fileID: 0}
+  level3Cube: {fileID: 0}
+  level4Cube: {fileID: 0}
+  level5Cube: {fileID: 184540376}
+  level6Cube: {fileID: 265680679}
+  level7Cube: {fileID: 714671729}
+  level8Cube: {fileID: 702117825}
+  goToNextPageCube: {fileID: 0}
   disabledColorMaterial: {fileID: 2100000, guid: d4beac94e55e047ad8a5eeb1b4a255fc, type: 2}
   enabledColorMaterial: {fileID: 2100000, guid: 679cdb4a09a9849c09e74d2618d2d773, type: 2}
 --- !u!1 &702117825
@@ -2144,7 +2140,7 @@ GameObject:
   - component: {fileID: 702117828}
   - component: {fileID: 702117827}
   m_Layer: 0
-  m_Name: GoToLevel4
+  m_Name: GoToLevel8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2239,7 +2235,7 @@ GameObject:
   - component: {fileID: 714671732}
   - component: {fileID: 714671731}
   m_Layer: 0
-  m_Name: GoToLevel3
+  m_Name: GoToLevel7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3202,7 +3198,7 @@ GameObject:
   - component: {fileID: 1102155372}
   - component: {fileID: 1102155371}
   m_Layer: 0
-  m_Name: Level2HighScore
+  m_Name: Level6HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3372,7 +3368,7 @@ GameObject:
   - component: {fileID: 1123003742}
   - component: {fileID: 1123003741}
   m_Layer: 0
-  m_Name: Level3
+  m_Name: Level7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3417,10 +3413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '3
-
-
-'
+  m_text: 7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
   m_sharedMaterial: {fileID: -6412188900274110264, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
@@ -3607,7 +3600,7 @@ GameObject:
   - component: {fileID: 1165858620}
   - component: {fileID: 1165858619}
   m_Layer: 0
-  m_Name: Level2
+  m_Name: Level6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3652,7 +3645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2
+  m_text: 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
   m_sharedMaterial: {fileID: -6412188900274110264, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
@@ -4160,7 +4153,7 @@ GameObject:
   - component: {fileID: 1380089743}
   - component: {fileID: 1380089742}
   m_Layer: 0
-  m_Name: Level4HighScore
+  m_Name: Level8HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4585,7 +4578,7 @@ GameObject:
   - component: {fileID: 1504026374}
   - component: {fileID: 1504026373}
   m_Layer: 0
-  m_Name: Level3HighScore
+  m_Name: Level7HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4743,7 +4736,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &1544765258
+--- !u!1001 &1620009145
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -4752,11 +4745,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5862123415188146284, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
       propertyPath: m_Name
-      value: GoToLevels2Cube
+      value: GoToLevelsCube (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5862123415188146285, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5862123415188146285, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4798,21 +4791,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5862123415188146287, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 679cdb4a09a9849c09e74d2618d2d773, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
---- !u!4 &1544765259 stripped
+--- !u!4 &1620009146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5862123415188146285, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
-  m_PrefabInstance: {fileID: 1544765258}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1544765260 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5862123415188146284, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
-  m_PrefabInstance: {fileID: 1544765258}
+  m_PrefabInstance: {fileID: 1620009145}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1800827547
 GameObject:
@@ -4940,8 +4924,8 @@ Transform:
   - {fileID: 265680680}
   - {fileID: 714671730}
   - {fileID: 702117826}
-  - {fileID: 1544765259}
   - {fileID: 2268754058216750104}
+  - {fileID: 1620009146}
   m_Father: {fileID: 905854557}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4957,7 +4941,7 @@ GameObject:
   - component: {fileID: 1877044206}
   - component: {fileID: 1877044205}
   m_Layer: 0
-  m_Name: Level1HighScore
+  m_Name: Level5HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5297,7 +5281,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5862123415188146284, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
       propertyPath: m_Name
-      value: GoToHomeCube
+      value: GoToLevelsCube
       objectReference: {fileID: 0}
     - target: {fileID: 5862123415188146285, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
       propertyPath: m_RootOrder
