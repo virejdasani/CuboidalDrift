@@ -28,7 +28,7 @@ public class LevelsSceneHighScores : MonoBehaviour
             level4HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel4").ToString("f1") + "s";
 
             // This part is to check which levels the player can access, depending on the previous levels they have completed
-            // Check if the highScore for Level1 is == 0.0 If it is, then level1 is incomplete
+            // Check if the highScore for Level1 is == 0.0 If it is, then the level is incomplete
             if (PlayerPrefs.GetFloat("highScoreLevel1").ToString("f1") == "0.0")
             {
                 // We take all the cubes after the last incomplete level and set them to the disabled color
@@ -37,17 +37,20 @@ public class LevelsSceneHighScores : MonoBehaviour
                 level4Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
+            // Check if the highScore for Level2 is == 0.0 If it is, then the level is incomplete
             else if (PlayerPrefs.GetFloat("highScoreLevel2").ToString("f1") == "0.0")
             {
                 level3Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level4Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
+            // Check if the highScore for Level3 is == 0.0 If it is, then the level is incomplete
             else if (PlayerPrefs.GetFloat("highScoreLevel3").ToString("f1") == "0.0")
             {
                 level4Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
+            // Check if the highScore for Level4 is == 0.0 If it is, then the level is incomplete
             else if (PlayerPrefs.GetFloat("highScoreLevel4").ToString("f1") == "0.0")
             {
                 //level5Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;

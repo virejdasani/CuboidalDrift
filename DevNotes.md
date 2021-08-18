@@ -1,7 +1,7 @@
 ## OnNewLevel()
 - Go to Player GameObject
 - Re-Add time scores TMP objects in the TimeScore script
-- Add ThisSceneName in the TimeScore script and in the PlayerExplosion script
+- Add ThisSceneName in the TimeScore script and in the PlayerExplosion script on Player GameObject
 - Change the name of the nextLevelCube
 - To get proper lighting, go to window->rendering->lighting. Click new lighting settings and check the auto generate box
 - In `LevelsSceneHighScores.cs` and `PlayerCollisionHandler.cs` add the new level in the appropriate areas
