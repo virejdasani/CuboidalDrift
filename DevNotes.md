@@ -28,5 +28,8 @@
 - In player settings, change the default logo to desktopLogo or logo for mobile
 - If the scenes look too bright, lower the bloom in the global post-process volume
 
+## OnUpdate()
+- Change the version number in the player settings, homepage ground and in the about modal
+
 ## Notes
 - The `PreviewScene` is to get assets like the app logo, preview banner etc.

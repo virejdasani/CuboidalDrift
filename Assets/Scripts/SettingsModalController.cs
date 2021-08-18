@@ -14,6 +14,11 @@ public class SettingsModalController : MonoBehaviour
         AudioListener.volume = 0;
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     public void CloseSettingsModal()
     {
         // Hide the modal
