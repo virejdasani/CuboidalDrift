@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15047634, g: 0.15697923, b: 0.3162445, a: 1}
+  m_IndirectSpecularColor: {r: 0.31309137, g: 0.2937541, b: 0.5141203, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1585,6 +1585,10 @@ PrefabInstance:
     - target: {fileID: 6827447228332655101, guid: f086d394caf384dfba433162d04c2fa6, type: 3}
       propertyPath: m_Name
       value: SettingsCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827447228332655102, guid: f086d394caf384dfba433162d04c2fa6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7632961851410516158, guid: f086d394caf384dfba433162d04c2fa6, type: 3}
       propertyPath: SettingsModal
@@ -4001,6 +4005,10 @@ PrefabInstance:
     - target: {fileID: 6827447228332655101, guid: de7af2c3abf724f97b85b5113db7c380, type: 3}
       propertyPath: m_Name
       value: AboutCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827447228332655102, guid: de7af2c3abf724f97b85b5113db7c380, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de7af2c3abf724f97b85b5113db7c380, type: 3}
