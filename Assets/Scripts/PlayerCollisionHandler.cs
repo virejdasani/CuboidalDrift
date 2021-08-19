@@ -149,6 +149,12 @@ public class PlayerCollisionHandler : MonoBehaviour
             // When the user hits the settings cube, the modal pops up by unhiding the canvas that was previously set to hidden = SetActive(false);
             SettingsModal.gameObject.SetActive(true);
         }
+
+        else if (collision.gameObject.name == "LeaderboardCube")
+        {
+            // Show the leaderboard ui
+            PlayGames.ShowLeaderboard();
+        }
     }
 
     // This transitions to the passed in scene

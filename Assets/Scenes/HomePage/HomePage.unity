@@ -2667,7 +2667,7 @@ GameObject:
   - component: {fileID: 1521678559}
   - component: {fileID: 1521678558}
   m_Layer: 0
-  m_Name: SettingsText
+  m_Name: LeaderboardText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2681,7 +2681,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521678556}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 1.94}
+  m_LocalPosition: {x: 0, y: 0, z: 1.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 540522322}
@@ -2689,7 +2689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.05, y: 1.54}
+  m_AnchoredPosition: {x: 4, y: 1.54}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1521678558
@@ -2712,9 +2712,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Settings
-
-'
+  m_text: Leaderboard
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
   m_sharedMaterial: {fileID: -6412188900274110264, guid: fb32f721e19f14dbb9c8e231f411de83, type: 2}
@@ -2741,8 +2739,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7.5
-  m_fontSizeBase: 7.5
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3579,63 +3577,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134391959}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &46765771939787550
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.17999983
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.4799998
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173234, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 46765772259173236, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
-      propertyPath: m_Name
-      value: PlayGames
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 338668f95fbad403d8e6fcde07900462, type: 3}
 --- !u!1001 &335399370101298039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3807,7 +3748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268754059275889149, guid: 7f686f66c2ab24c5e88f5210c2f50a0f, type: 3}
       propertyPath: m_Name
-      value: SettingsCube
+      value: LeaderboardCube
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f686f66c2ab24c5e88f5210c2f50a0f, type: 3}

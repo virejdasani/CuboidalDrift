@@ -37,3 +37,4 @@
 ## Notes
 - The `PreviewScene` is to get assets like the app logo, preview banner etc.
 - If in the build settings, it says something like `Unable to access unity services...`, go to Window->General->Services. This opens a services window. Click General settings. This opens a project settings window. Once it opens, do nothing, close it. Fixed!
+- When creating new level leaderboards, make sure the decimals is set to 2
