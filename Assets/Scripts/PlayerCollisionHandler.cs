@@ -94,7 +94,12 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "GoToLevel5")
         {
-            LoadScene("Level5");
+            if (PlayerPrefs.GetFloat("highScoreLevel4").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+            {
+                LoadScene("Level5");
+                // This is the reached Level 5 achievement
+                PlayGames.UnlockAchievement("CgkInoKH190DEAIQBg");
+            }
         }
 
         else if (collision.gameObject.name == "GoToLevel6")
