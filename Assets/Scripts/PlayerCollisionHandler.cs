@@ -49,8 +49,10 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "GoToLevels2Cube")
         {
-            // Shows the interstitial ad
-            AdManager.instance.ShowInterstitial();
+            // Check that the GoToLevels2Cube isn't the one at the end of level4 but the one in Levels scene
+            if (collision.gameObject.tag != "FinishCube")
+                // Shows the interstitial ad
+                AdManager.instance.ShowInterstitial();
 
             // This is the page 2 of the levels scene
             // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
