@@ -30,6 +30,7 @@
 
 ## OnUpdate()
 - Change the version number in the player settings, homepage ground and in the about modal
+- Make sure to remove test adUnitIds from the ads prefab
 
 ## Notes
 - The `PreviewScene` is to get assets like the app logo, preview banner etc.

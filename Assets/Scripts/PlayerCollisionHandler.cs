@@ -29,6 +29,9 @@ public class PlayerCollisionHandler : MonoBehaviour
             // At the start, we dont show the settings modal
             SettingsModal.gameObject.SetActive(false);
         }
+
+        // For ads
+        AdManager.instance.RequestInterstitial();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -46,6 +49,9 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "GoToLevels2Cube")
         {
+            // Shows the interstitial ad
+            AdManager.instance.ShowInterstitial();
+
             // This is the page 2 of the levels scene
             // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
             if (PlayerPrefs.GetFloat("highScoreLevel4").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
@@ -74,6 +80,11 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "GoToLevel4")
         {
+            // If the collision is when player just completed level 3. Don't show ads in the levels scences
+            if (collision.gameObject.tag == "FinishCube")
+                // Show the interstitial ad
+                AdManager.instance.ShowInterstitial();
+
             // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
             if (PlayerPrefs.GetFloat("highScoreLevel3").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
                 LoadScene("Level4");
@@ -100,6 +111,11 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "GoToLevel8")
         {
+            // If the collision is when player just completed level 7. Don't show ads in the levels scences
+            if (collision.gameObject.tag == "FinishCube")
+                // Show the interstitial ad
+                AdManager.instance.ShowInterstitial();
+
             // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
             if (PlayerPrefs.GetFloat("highScoreLevel7").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
                 LoadScene("Level8");
