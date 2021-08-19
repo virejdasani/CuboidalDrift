@@ -35,6 +35,7 @@ public class PlayerExplosion : MonoBehaviour
 
     void FixedUpdate()
     {
+        // If the player falls below -10 y
         if (gameObject.transform.position.y < -10.0f)
         {
             // Reload the same level
@@ -58,13 +59,13 @@ public class PlayerExplosion : MonoBehaviour
                 isSoundPlayed = true;
             }
 
-            // 20% of the times, when the player dies, an ad is shown
-            // Get a random num from 1 to 10
+            // 15% of the times, when the player dies, an ad is shown
+            // Get a random num from 1 to 100
             System.Random random = new System.Random();
-            int randNum = random.Next(1, 10);
+            int randNum1 = random.Next(1, 100);
 
-            // If the random number is 1 or 2, which happens 20% of the times, show an ad
-            if (randNum < 3)
+            // If the random number is 15 or lesset, which happens 15% of the times, show an ad
+            if (randNum1 < 16)
             {
                 // Show the interstitial ad
                 AdManager.instance.ShowInterstitial();
@@ -82,8 +83,11 @@ public class PlayerExplosion : MonoBehaviour
         gameObject.GetComponent<Renderer>().enabled = false;
 
         // This will disable collisions with the player. This is needed because even after the player explodes, they could still touch the FinishCube and potentially set a highscore
-        // This also gives a cool effect of the camera falling down
         gameObject.GetComponent<Rigidbody>().detectCollisions = false;
+
+        // This is so that the player camera doesn't fall under the ground
+        // This is commented ou
+        //gameObject.GetComponent<Rigidbody>().useGravity = false;
 
 
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
