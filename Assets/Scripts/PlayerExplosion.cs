@@ -59,13 +59,13 @@ public class PlayerExplosion : MonoBehaviour
                 isSoundPlayed = true;
             }
 
-            // 15% of the times, when the player dies, an ad is shown
-            // Get a random num from 1 to 100
+            // 10% of the times, when the player dies, an ad is shown
+            // Get a random num from 1 to 10
             System.Random random = new System.Random();
-            int randNum1 = random.Next(1, 100);
+            int randNum1 = random.Next(1, 10);
 
-            // If the random number is 15 or lesset, which happens 15% of the times, show an ad
-            if (randNum1 < 16)
+            // If the random number is 1, which happens 10% of the times, show an ad
+            if (randNum1 == 1)
             {
                 // Show the interstitial ad
                 AdManager.instance.ShowInterstitial();
