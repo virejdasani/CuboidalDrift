@@ -11,3 +11,4 @@
 - Add an exit button in the ui menu [x]
 - Add a menu in the ui to all scenes [x]
 - Add ads [x]
+- Stop player from touching FinishCube after death (Also adds a coll camera falling effect)[x]

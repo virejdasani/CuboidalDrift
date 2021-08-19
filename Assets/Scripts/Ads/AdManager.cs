@@ -7,7 +7,7 @@ using System;
 // Add this to the start method of that script:
 //AdManager.instance.RequestInterstitial();
 // Then, call this from where you want to show the ad:
-// Shows the interstitial ad
+// Show the interstitial ad
 //AdManager.instance.ShowInterstitial();
 
 // Banner ads have been commented out for this game because I don't think it'll look good in landscape

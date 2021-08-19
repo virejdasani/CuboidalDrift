@@ -49,8 +49,8 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "GoToLevels2Cube")
         {
-            // Check that the GoToLevels2Cube isn't the one at the end of level4 but the one in Levels scene
-            if (collision.gameObject.tag != "FinishCube")
+            // Check that the GoToLevels2Cube has the ShowAd tag. This only exits in the Levels2 scene
+            if (collision.gameObject.tag == "ShowAd")
                 // Shows the interstitial ad
                 AdManager.instance.ShowInterstitial();
 

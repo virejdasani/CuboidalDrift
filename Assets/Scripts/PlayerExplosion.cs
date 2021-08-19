@@ -2,6 +2,7 @@ using UnityEngine;
 
 // This is used to create the breaking explosion when player dies
 // From this video: https://www.youtube.com/watch?v=s_v9JnTDCCY
+
 public class PlayerExplosion : MonoBehaviour
 {
     public string thisSceneName;
@@ -57,6 +58,18 @@ public class PlayerExplosion : MonoBehaviour
                 isSoundPlayed = true;
             }
 
+            // 20% of the times, when the player dies, an ad is shown
+            // Get a random num from 1 to 10
+            System.Random random = new System.Random();
+            int randNum = random.Next(1, 10);
+
+            // If the random number is 1 or 2, which happens 20% of the times, show an ad
+            if (randNum < 3)
+            {
+                // Show the interstitial ad
+                AdManager.instance.ShowInterstitial();
+            }
+
             // Reload the same level
             Initiate.Fade(thisSceneName, Color.black, 0.5f);
         }
@@ -67,6 +80,11 @@ public class PlayerExplosion : MonoBehaviour
     {
         // This disables the mesh renderer and makes cube invisible
         gameObject.GetComponent<Renderer>().enabled = false;
+
+        // This will disable collisions with the player. This is needed because even after the player explodes, they could still touch the FinishCube and potentially set a highscore
+        // This also gives a cool effect of the camera falling down
+        gameObject.GetComponent<Rigidbody>().detectCollisions = false;
+
 
         //loop 3 times to create 5x5x5 pieces in x,y,z coordinates
         for (int x = 0; x < cubesInRow; x++)
