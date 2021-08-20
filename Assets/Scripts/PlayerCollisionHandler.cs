@@ -131,6 +131,9 @@ public class PlayerCollisionHandler : MonoBehaviour
         else if (collision.gameObject.name == "LastLevelFinishCube")
         {
             LoadScene("MoreLevelsComingSoon");
+
+            // This is the Expert Gamer achievemnet. Unlocked when all levels are completed
+            PlayGames.UnlockAchievement("CgkInoKH190DEAIQDw");
         }
 
         else if (collision.gameObject.name == "GitHubCube")
