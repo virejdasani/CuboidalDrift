@@ -124,10 +124,10 @@ public class LevelsSceneHighScores : MonoBehaviour
         else if (level9HighScoreText)
         {
             // This sets the text in the scene to something like: "BEST: 10.3s"
-            level5HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel9").ToString("f1") + "s";
-            level6HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel10").ToString("f1") + "s";
-            level7HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel11").ToString("f1") + "s";
-            level8HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel12").ToString("f1") + "s";
+            level9HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel9").ToString("f1") + "s";
+            level10HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel10").ToString("f1") + "s";
+            level11HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel11").ToString("f1") + "s";
+            level12HighScoreText.text = "BEST: " + PlayerPrefs.GetFloat("highScoreLevel12").ToString("f1") + "s";
 
             // This part is to check which levels the player can access, depending on the previous levels they have completed
             // Check if the highScore for Level1 is == 0.0 If it is, then the level is incomplete
@@ -155,7 +155,7 @@ public class LevelsSceneHighScores : MonoBehaviour
             // Check if the highScore for Level4 is == 0.0 If it is, then the level is incomplete
             else if (PlayerPrefs.GetFloat("highScoreLevel12").ToString("f1") == "0.0")
             {
-                //goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
         }

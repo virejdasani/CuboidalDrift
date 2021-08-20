@@ -2116,10 +2116,10 @@ MonoBehaviour:
   level6HighScoreText: {fileID: 0}
   level7HighScoreText: {fileID: 0}
   level8HighScoreText: {fileID: 0}
-  level9HighScoreText: {fileID: 579981172}
-  level10HighScoreText: {fileID: 1165858619}
-  level11HighScoreText: {fileID: 1123003741}
-  level12HighScoreText: {fileID: 166160336}
+  level9HighScoreText: {fileID: 1877044205}
+  level10HighScoreText: {fileID: 1102155371}
+  level11HighScoreText: {fileID: 1504026373}
+  level12HighScoreText: {fileID: 1380089742}
   level1Cube: {fileID: 0}
   level2Cube: {fileID: 0}
   level3Cube: {fileID: 0}
@@ -3206,7 +3206,7 @@ GameObject:
   - component: {fileID: 1102155372}
   - component: {fileID: 1102155371}
   m_Layer: 0
-  m_Name: Level6HighScore
+  m_Name: Level10HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4323,7 +4323,7 @@ GameObject:
   - component: {fileID: 1380089743}
   - component: {fileID: 1380089742}
   m_Layer: 0
-  m_Name: Level8HighScore
+  m_Name: Level12HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4835,7 +4835,7 @@ GameObject:
   - component: {fileID: 1504026374}
   - component: {fileID: 1504026373}
   m_Layer: 0
-  m_Name: Level7HighScore
+  m_Name: Level11HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5136,7 +5136,7 @@ GameObject:
   - component: {fileID: 1877044206}
   - component: {fileID: 1877044205}
   m_Layer: 0
-  m_Name: Level5HighScore
+  m_Name: Level9HighScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5597,7 +5597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6115259862183923745, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
       propertyPath: thisSceneName
-      value: Levels3
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}

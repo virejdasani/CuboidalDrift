@@ -92,6 +92,7 @@ public class TimeScore : MonoBehaviour
             // Check if new highScore. The highScore is the time taken to complete the level. So, lower time is better. If highScore == 0, this means the level hasn't been completed even once yet.
             if (thisScore < highScore || highScore == 0)
             {
+                Debug.Log("setting" + thisSceneName);
                 // Save the new highScore
                 PlayerPrefs.SetFloat("highScore" + thisSceneName, thisScore);
 
