@@ -1,3 +1,3 @@
 - When making any changes to the game, make sure you use Unity version `2020.3.16f1`
 - You may want to check out [DevNotes.md](https://github.com/virejdasani/CuboidalDrift/blob/master/DevNotes.md) before making changes too
-- Make sure that before pushing a commit there are no bugs, errors and `Debug.Log()` statements
+- Make sure that before pushing a commit there are no bugs, no errors and no `Debug.Log()` statements
