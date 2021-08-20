@@ -183,6 +183,11 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "GoToLevel11")
         {
+            // If the collision is when player just completed level 7. Don't show ads in the levels scences
+            if (collision.gameObject.tag == "FinishCube")
+                // Show the interstitial ad
+                AdManager.instance.ShowInterstitial();
+
             // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
             if (PlayerPrefs.GetFloat("highScoreLevel10").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
                 LoadScene("Level11");
@@ -190,11 +195,6 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "GoToLevel12")
         {
-            // If the collision is when player just completed level 7. Don't show ads in the levels scences
-            if (collision.gameObject.tag == "FinishCube")
-                // Show the interstitial ad
-                AdManager.instance.ShowInterstitial();
-
             // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
             if (PlayerPrefs.GetFloat("highScoreLevel11").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
                 LoadScene("Level12");
