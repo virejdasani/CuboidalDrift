@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class TimeScore : MonoBehaviour
 {
@@ -19,6 +20,16 @@ public class TimeScore : MonoBehaviour
     private bool levelComplete;
     private bool playerOnSurface;
     private bool isTimerStarted;
+
+    // PlayGames leaderboard ids from play console
+    private string leaderboardLevel1 = "CgkInoKH190DEAIQBw";
+    private string leaderboardLevel2 = "CgkInoKH190DEAIQCA";
+    private string leaderboardLevel3 = "CgkInoKH190DEAIQCQ";
+    private string leaderboardLevel4 = "CgkInoKH190DEAIQCg";
+    private string leaderboardLevel5 = "CgkInoKH190DEAIQCw";
+    private string leaderboardLevel6 = "CgkInoKH190DEAIQDA";
+    private string leaderboardLevel7 = "CgkInoKH190DEAIQDQ";
+    private string leaderboardLevel8 = "CgkInoKH190DEAIQDg";
 
     void Start()
     {
@@ -44,7 +55,6 @@ public class TimeScore : MonoBehaviour
             highScoreText.text = "BEST TIME: " + highScore.ToString("f1");
             highScoreText2.text = "BEST TIME: " + highScore.ToString("f1");
         }
-
     }
 
     void Update()
@@ -80,6 +90,72 @@ public class TimeScore : MonoBehaviour
             {
                 // Save the new highScore
                 PlayerPrefs.SetFloat("highScore" + thisSceneName, thisScore);
+
+                // This is to add the new highscore to the PlayGames leaderboard
+                if (thisSceneName == "Level1")
+                {
+                    // This is needed or else in the leaderboard, there is weird decimal behaviour, DONT TOUCH
+                    // When copy pasting these, change level number in 4 places. 2 in the first line and 2 in the next
+                    float playGamesLevel1 = Mathf.Floor(PlayerPrefs.GetFloat("highScoreLevel1") * 1000);
+                    PlayGames.AddScoreToLeaderboard((long)playGamesLevel1 / 10, leaderboardLevel1);
+                }
+
+                else if (thisSceneName == "Level2")
+                {
+                    // This is needed or else in the leaderboard, there is weird decimal behaviour, DONT TOUCH
+                    // When copy pasting these, change level number in 4 places. 2 in the first line and 2 in the next
+                    float playGamesLevel2 = Mathf.Floor(PlayerPrefs.GetFloat("highScoreLevel2") * 1000);
+                    PlayGames.AddScoreToLeaderboard((long)playGamesLevel2 / 10, leaderboardLevel2);
+                }
+
+                else if (thisSceneName == "Level3")
+                {
+                    // This is needed or else in the leaderboard, there is weird decimal behaviour, DONT TOUCH
+                    // When copy pasting these, change level number in 4 places. 2 in the first line and 2 in the next
+                    float playGamesLevel3 = Mathf.Floor(PlayerPrefs.GetFloat("highScoreLevel3") * 1000);
+                    PlayGames.AddScoreToLeaderboard((long)playGamesLevel3 / 10, leaderboardLevel3);
+                }
+
+                else if (thisSceneName == "Level4")
+                {
+                    // This is needed or else in the leaderboard, there is weird decimal behaviour, DONT TOUCH
+                    // When copy pasting these, change level number in 4 places. 2 in the first line and 2 in the next
+                    float playGamesLevel4 = Mathf.Floor(PlayerPrefs.GetFloat("highScoreLevel4") * 1000);
+                    PlayGames.AddScoreToLeaderboard((long)playGamesLevel4 / 10, leaderboardLevel4);
+                }
+
+                else if (thisSceneName == "Level5")
+                {
+                    // This is needed or else in the leaderboard, there is weird decimal behaviour, DONT TOUCH
+                    // When copy pasting these, change level number in 4 places. 2 in the first line and 2 in the next
+                    float playGamesLevel5 = Mathf.Floor(PlayerPrefs.GetFloat("highScoreLevel5") * 1000);
+                    PlayGames.AddScoreToLeaderboard((long)playGamesLevel5 / 10, leaderboardLevel5);
+                }
+
+                else if (thisSceneName == "Level6")
+                {
+                    // This is needed or else in the leaderboard, there is weird decimal behaviour, DONT TOUCH
+                    // When copy pasting these, change level number in 4 places. 2 in the first line and 2 in the next
+                    float playGamesLevel6 = Mathf.Floor(PlayerPrefs.GetFloat("highScoreLevel6") * 1000);
+                    PlayGames.AddScoreToLeaderboard((long)playGamesLevel6 / 10, leaderboardLevel6);
+                }
+
+                else if (thisSceneName == "Level7")
+                {
+                    // This is needed or else in the leaderboard, there is weird decimal behaviour, DONT TOUCH
+                    // When copy pasting these, change level number in 4 places. 2 in the first line and 2 in the next
+                    float playGamesLevel7 = Mathf.Floor(PlayerPrefs.GetFloat("highScoreLevel7") * 1000);
+                    PlayGames.AddScoreToLeaderboard((long)playGamesLevel7 / 10, leaderboardLevel7);
+                }
+
+                else if (thisSceneName == "Level8")
+                {
+                    // This is needed or else in the leaderboard, there is weird decimal behaviour, DONT TOUCH
+                    // When copy pasting these, change level number in 4 places. 2 in the first line and 2 in the next
+                    float playGamesLevel8 = Mathf.Floor(PlayerPrefs.GetFloat("highScoreLevel8") * 1000);
+                    PlayGames.AddScoreToLeaderboard((long)playGamesLevel8 / 10, leaderboardLevel8);
+                }
+
             }
 
         }

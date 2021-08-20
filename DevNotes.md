@@ -6,6 +6,8 @@
 - In `LevelsSceneHighScores.cs` and `PlayerCollisionHandler.cs` add the new level in the appropriate areas
 - Make sure the back button in the level is pointing to the correct levels scene
 - To get proper lighting, go to window->rendering->lighting. Click new lighting settings and check the auto generate box
+- Add the leaderboard for that level from google play console. Then get the id and add it in `TimeScore.cs`
+- Add ads in the appropriate levels ending
 
 ## Piston animation
 - Piston comes all the way out at 60 frames
@@ -34,3 +36,5 @@
 
 ## Notes
 - The `PreviewScene` is to get assets like the app logo, preview banner etc.
+- If in the build settings, it says something like `Unable to access unity services...`, go to Window->General->Services. This opens a services window. Click General settings. This opens a project settings window. Once it opens, do nothing, close it. Fixed!
+- When creating new level leaderboards, make sure the decimals is set to 2

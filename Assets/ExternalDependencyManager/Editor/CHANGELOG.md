@@ -1,41 +1,13 @@
-# Version 1.2.165 - Apr 28, 2021
-## Bug Fixes
-* Version Handler - Fixed #431 by replacing the use of `HttpUtility.UrlEncode()`
-  which causes NullReferenceException in certain version of Unity.
-* Android Resolver - Check that androidSdkRootPath directory exists before using
-  as sdkPath.
-* Android Resolver - Fixed Android Resolver integration tests with Unity
-  2019.3+.
-
-# Version 1.2.164 - Feb 4, 2021
-## New Features
-* Android Resolver - Added support for Android packages with classifier in their
-  namespaces.
-* iOS Resolver - Added new settings in iOS Resolver to configure generated
-  Podfile.
-* iOS Resolver - Added a new attribute `addToAllTargets` in Dependencies.xml.
-
-## Bug Fixes
-* iOS Resolver - Fixed XML parsing for `bitcodeEnabled` attribute in
-  Dependencies.xml.
-
-# Version 1.2.163 - Dec 15, 2020
-## Bug Fixes
-* Version Handler - Fixed measurement reporting
-
 # Version 1.2.162 - Nov 19, 2020
-## Bug Fixes
 * Version Handler - Improved #413 by preventing Version Handler from running
   from static constructor when it is disabled.
 * Package Manager Resolver - Remove GPR
 
 # Version 1.2.161 - Oct 12, 2020
-## Bug Fixes
 * Android Resolver - Fixed the issue that Android Resolver does not resolve
   again before build in Unity 2020 if it failed to resolve previously.
 
 # Version 1.2.160 - Sep 30, 2020
-## Bug Fixes
 * Android Resolver - Fixed a regression that gradleResolver can be null until
   Initialize() is called.
 * Android Resolver - Fixed a regression that Android Resolver failed in Unity
@@ -43,7 +15,6 @@
   `mainTemplate.gradle` is not enabled at all.
 
 # Version 1.2.159 - Sep 11, 2020
-## Bug Fixes
 * Android Resolver - Fixed #322 where the Unity editor will lose its target SDK
   setting between Unity restarts if `>28` is selected in 2019.  This is due to
   Unity AndroidSdkVersions enum does not contain values above 28.
@@ -54,7 +25,6 @@
   `Player Settings > Settings for Android > Publishing Settings`.
 
 # Version 1.2.158 - Sep 3, 2020
-## Bug Fixes
 * Version Handler: Fixed editor freeze when `-executeMethod` is used in
   non-batch mode.
 * Android Resolver: Normalized file paths when generating local Maven repo
@@ -63,7 +33,6 @@
   Windows.
 
 # Version 1.2.157 - Aug 6, 2020
-## Bug Fixes
 * Android Resolver: Delay initialization until active build target is Android
   and the editor is not in play mode.
 * iOS Resolver: Delay initialization until active build target is iOS
@@ -72,7 +41,7 @@
   operations are spawned at the same time.
 
 # Version 1.2.156 - June 10, 2020
-## Bug Fixes
+* All: Described EDM4U analytics data usage in readme.
 * Android Resolver: Fixed that the generated local repo assets contains
   redundent labels which are causing Version Handler to failed while
   uninstalling packages.
@@ -81,33 +50,24 @@
 * Android Resolver: Limited to only create local Maven repo when the source
   repo contains ".srcaar" file.
 
-## Changes
-* All: Described EDM4U analytics data usage in readme.
-
 # Version 1.2.155 - May 14, 2020
-## Bug Fixes
 * All: Fixed compiler error when build with Unity 5.4 or below due to the
   usage of Rect.zero.
 * All: Ignore cases when checking command line arguments.
 
 # Version 1.2.154 - May 14, 2020
-## Bug Fixes
 * All: Make each MultiSelectWindow for different purposes to have its own
   unique window.
-
-## Changes
 * All: Replace all dialog with DialogWindow which is implemented from
   EditorWindow.
 * Package Manager Resolver: Clarify how manifest.json will be changed in Package
   Manager Resolver window.
 
 # Version 1.2.153 - Apr 24, 2020
-## Bug Fixes
 * Android Resolver: Fixed an exception when repainting the Android resolution
   window in Unity 2019.3.x.
 
 # Version 1.2.152 - Apr 17, 2020
-## Bug Fixes
 * Version Handler: Fixed exception when waiting for enabled editor DLLs to
   load.
 * Android Resolver: Fixed regression when using a Custom Gradle Template
