@@ -158,12 +158,12 @@ GameObject:
   - component: {fileID: 8596308445350847816}
   - component: {fileID: 8596308445350847823}
   - component: {fileID: 6639384396043208402}
-  - component: {fileID: 8596308445350847821}
   - component: {fileID: 8025749449465710740}
   - component: {fileID: 1347046951948052209}
   - component: {fileID: 5985696503012418097}
   - component: {fileID: 4077020428337060053}
   - component: {fileID: 2449342329724519376}
+  - component: {fileID: 8471946189224799942}
   m_Layer: 0
   m_Name: OnlinePlayer
   m_TagString: Player
@@ -278,21 +278,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TouchMovementSpeed: 600
   keyboardMovementSpeed: 50000
---- !u!114 &8596308445350847821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8596308445350847820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a69d13b7a444540ab95466b5ed304813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 2
-  AboutModal: {fileID: 0}
-  SettingsModal: {fileID: 6827447228332655101, guid: f086d394caf384dfba433162d04c2fa6, type: 3}
 --- !u!114 &8025749449465710740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,10 +309,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b79ea0924144b45b4eb4c600e9cfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisScoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
-  thisScoreText2: {fileID: 0}
-  highScoreText2: {fileID: 0}
+  thisScoreText: {fileID: 4963427035012698517, guid: 8168a89a03fa54aabb38fff804b2be41, type: 3}
+  highScoreText: {fileID: 4967356417013296088, guid: 15683290cd5ed445eb4bf35abe11947b, type: 3}
+  thisScoreText2: {fileID: 5946004714263446643, guid: 73f6db3530a634dc3902f63c5ba69f35, type: 3}
+  highScoreText2: {fileID: 3603199443768230409, guid: 4a823e615b2a247de93dd13e8847c8c8, type: 3}
   thisSceneName: Level1Multiplayer
 --- !u!82 &5985696503012418097
 AudioSource:
@@ -481,3 +466,18 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &8471946189224799942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596308445350847820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b51fc6eb355cd491a9be95c2df35568e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 2
+  AboutModal: {fileID: 0}
+  SettingsModal: {fileID: 6827447228332655101, guid: f086d394caf384dfba433162d04c2fa6, type: 3}

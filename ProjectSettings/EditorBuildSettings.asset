@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Multiplayer/Level1Multiplayer.unity
     guid: 9a4eed5c31b614c898ddbd01ed7b3b29
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/Win/0win.unity
+    guid: 409ec24110d4149b6a3a6663c877b43a
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/Win/1win.unity
+    guid: b2bae8bd0a86f49138193fb60f8176c7
   m_configObjects: {}

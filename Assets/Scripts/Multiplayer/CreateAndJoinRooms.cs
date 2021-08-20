@@ -1,7 +1,7 @@
 using UnityEngine;
 using Photon.Pun;
 using TMPro;
-
+using Photon.Realtime;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
