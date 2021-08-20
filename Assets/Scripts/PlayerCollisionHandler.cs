@@ -158,6 +158,11 @@ public class PlayerCollisionHandler : MonoBehaviour
             // Show the leaderboard ui
             PlayGames.ShowLeaderboard();
         }
+
+        else if (collision.gameObject.name == "MultiplayerCube")
+        {
+            LoadScene("Loading");
+        }
     }
 
     // This transitions to the passed in scene
