@@ -8,12 +8,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     public GameObject joinInput;
     public GameObject createInput;
 
-
-    public void CreateRoomLobby()
-    {
-        Initiate.Fade("RoomLobby", Color.black, 0.5f);
-    }
-
     public void CreateRoom()
     {
         PhotonNetwork.CreateRoom(createInput.GetComponent<TMP_InputField>().text);
@@ -26,6 +20,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("Level1");
+        PhotonNetwork.LoadLevel("Level1Multiplayer");
     }
 }
