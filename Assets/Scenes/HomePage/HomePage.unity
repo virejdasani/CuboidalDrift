@@ -3920,6 +3920,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2958118365710745156, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
+      propertyPath: thisSceneName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4535948889778876928, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4007,6 +4011,10 @@ PrefabInstance:
     - target: {fileID: 5544155543365385726, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
       propertyPath: m_LocalPosition.y
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6115259862183923745, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
+      propertyPath: thisSceneName
+      value: HomePage
       objectReference: {fileID: 0}
     - target: {fileID: 6552086490323731190, guid: 343cf3b841ff443ab8fd85bced182903, type: 3}
       propertyPath: ShapeModule.type

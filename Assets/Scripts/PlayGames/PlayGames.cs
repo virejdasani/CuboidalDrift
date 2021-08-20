@@ -6,9 +6,6 @@ using GooglePlayGames.BasicApi;
 
 public class PlayGames : MonoBehaviour
 {
-    //string leaderboardID = "CgkInoKH190DEAIQAQ";
-    //string achievementID = "CgkInoKH190DEAIQAA";
-
     public static PlayGamesPlatform platform;
 
     void Start()
@@ -40,7 +37,6 @@ public class PlayGames : MonoBehaviour
         if (Social.Active.localUser.authenticated)
         {
             Social.ReportScore(highScore, leaderboardID, success => { });
-            //platform.ReportScore(highScore, leaderboardID, success => { });
         }
     }
 

@@ -2384,7 +2384,7 @@ Transform:
   m_GameObject: {fileID: 1053711370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.9100018, y: -0.5002, z: -4.98}
-  m_LocalScale: {x: 3.5, y: 1, z: 3.5}
+  m_LocalScale: {x: 3.5, y: 1, z: 3.8}
   m_Children: []
   m_Father: {fileID: 1698347370}
   m_RootOrder: 0
@@ -3993,7 +3993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3107948164015844286, guid: 220cd2bebb94d48629f9a3757b7e1cb0, type: 3}
       propertyPath: m_Name
-      value: LastLevelFinishCube
+      value: GoToLevels3Cube
       objectReference: {fileID: 0}
     - target: {fileID: 3107948164015844286, guid: 220cd2bebb94d48629f9a3757b7e1cb0, type: 3}
       propertyPath: m_TagString

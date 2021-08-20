@@ -83,10 +83,11 @@ public class PlayerExplosion : MonoBehaviour
         gameObject.GetComponent<Renderer>().enabled = false;
 
         // This will disable collisions with the player. This is needed because even after the player explodes, they could still touch the FinishCube and potentially set a highscore
+        // This also gives a cool effect of camera falling underground
         gameObject.GetComponent<Rigidbody>().detectCollisions = false;
 
         // This is so that the player camera doesn't fall under the ground
-        // This is commented ou
+        // This is commented out because that effect looks cool
         //gameObject.GetComponent<Rigidbody>().useGravity = false;
 
 
