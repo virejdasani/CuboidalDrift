@@ -48,6 +48,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Multiplayer/LobbyScene.unity
     guid: 28497d9779ce040b6977a296b8ac5c6b
   - enabled: 1
-    path: Assets/Scenes/Levels/Multiplayer/Level1Multiplayer.unity
+    path: Assets/Scenes/Multiplayer/Level1Multiplayer.unity
     guid: 9a4eed5c31b614c898ddbd01ed7b3b29
   m_configObjects: {}
