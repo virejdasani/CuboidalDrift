@@ -1,8 +1,7 @@
-## For v0.2
+## TODO
 
 - Replace the about cube with the multiplayer cube []
 - Add multiplayer []
-- Add custom splash screen []
 
 - Restrict level access if previous levels aren't completed [x]
 - Add more levels [x]
@@ -13,3 +12,4 @@
 - Stop player from touching FinishCube after death (Also adds a coll camera falling effect)[x]
 - Add google play games support [x]
 - Replace settings cube with leaderboard cube [x]
+- Add custom splash screen [x]

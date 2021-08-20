@@ -594,7 +594,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5862123415188146284, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
       propertyPath: m_Name
-      value: GoToLevelsCube
+      value: GoToLevels3Cube
       objectReference: {fileID: 0}
     - target: {fileID: 5862123415188146285, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
       propertyPath: m_RootOrder
