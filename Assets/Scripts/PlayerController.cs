@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         // Get the Rigidbody
         rb = GetComponent<Rigidbody>();
     }
-
+    
     void FixedUpdate()
     {
         // Check if the y position of the player is lower than 1. This is required because at he start of each level, the player falls from a high y value. Without this, the player can move in air and get out of the map
