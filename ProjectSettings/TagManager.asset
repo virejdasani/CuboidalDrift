@@ -9,6 +9,7 @@ TagManager:
   - FinishCube
   - PlayCube
   - ShowAd
+  - Boost
   layers:
   - Default
   - TransparentFX

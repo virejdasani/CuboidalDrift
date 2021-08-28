@@ -2303,6 +2303,14 @@ MonoBehaviour:
   level6HighScoreText: {fileID: 0}
   level7HighScoreText: {fileID: 0}
   level8HighScoreText: {fileID: 0}
+  level9HighScoreText: {fileID: 0}
+  level10HighScoreText: {fileID: 0}
+  level11HighScoreText: {fileID: 0}
+  level12HighScoreText: {fileID: 0}
+  level13HighScoreText: {fileID: 0}
+  level14HighScoreText: {fileID: 0}
+  level15HighScoreText: {fileID: 0}
+  level16HighScoreText: {fileID: 0}
   level1Cube: {fileID: 184540376}
   level2Cube: {fileID: 265680679}
   level3Cube: {fileID: 714671729}
@@ -2311,6 +2319,14 @@ MonoBehaviour:
   level6Cube: {fileID: 0}
   level7Cube: {fileID: 0}
   level8Cube: {fileID: 0}
+  level9Cube: {fileID: 0}
+  level10Cube: {fileID: 0}
+  level11Cube: {fileID: 0}
+  level12Cube: {fileID: 0}
+  level13Cube: {fileID: 0}
+  level14Cube: {fileID: 0}
+  level15Cube: {fileID: 0}
+  level16Cube: {fileID: 0}
   goToNextPageCube: {fileID: 1544765260}
   disabledColorMaterial: {fileID: 2100000, guid: d4beac94e55e047ad8a5eeb1b4a255fc, type: 2}
   enabledColorMaterial: {fileID: 2100000, guid: 679cdb4a09a9849c09e74d2618d2d773, type: 2}
@@ -5589,7 +5605,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5862123415188146284, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
       propertyPath: m_Name
-      value: GoToHomeCube
+      value: GoToLevelsSelectorCube
       objectReference: {fileID: 0}
     - target: {fileID: 5862123415188146285, guid: 7b3ebc403721a43928d3c556580d5e2e, type: 3}
       propertyPath: m_RootOrder

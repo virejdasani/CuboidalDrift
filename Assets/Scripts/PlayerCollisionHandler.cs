@@ -43,6 +43,11 @@ public class PlayerCollisionHandler : MonoBehaviour
             LoadScene("HomePage");
         }
 
+        else if (collision.gameObject.name == "GoToLevelsSelectorCube")
+        {
+            LoadScene("LevelsSelector");
+        }
+
         else if (collision.gameObject.name == "GoToLevelsCube")
         {
             LoadScene("Levels");
@@ -53,13 +58,13 @@ public class PlayerCollisionHandler : MonoBehaviour
             // Check that the GoToLevels2Cube has the ShowAd tag. This only exits in the Levels2 scene
             if (collision.gameObject.tag == "ShowAd")
             {
-                // 20% of the times, when the player dies, an ad is shown
+                // 10% of the times, when the player dies, an ad is shown
                 // Get a random num from 1 to 10
                 System.Random random = new System.Random();
                 int randNum = random.Next(1, 10);
 
-                // If the random number is 1 or 2, which happens 20% of the times, show an ad
-                if (randNum < 3)
+                // If the random number is 1, which happens 10% of the times, show an ad
+                if (randNum < 2)
                 {
                     // Show the interstitial ad
                     AdManager.instance.ShowInterstitial();
@@ -77,13 +82,13 @@ public class PlayerCollisionHandler : MonoBehaviour
             // Check that the GoToLevels2Cube has the ShowAd tag. This only exits in the Levels2 scene
             if (collision.gameObject.tag == "ShowAd")
             {
-                // 20% of the times, when the player dies, an ad is shown
+                // 10% of the times, when the player dies, an ad is shown
                 // Get a random num from 1 to 10
                 System.Random random = new System.Random();
                 int randNum1 = random.Next(1, 10);
 
-                // If the random number is 1 or 2, which happens 20% of the times, show an ad
-                if (randNum1 < 3)
+                // If the random number is 1, which happens 10% of the times, show an ad
+                if (randNum1 < 2)
                 {
                     // Show the interstitial ad
                     AdManager.instance.ShowInterstitial();
@@ -94,6 +99,30 @@ public class PlayerCollisionHandler : MonoBehaviour
             // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
             if (PlayerPrefs.GetFloat("highScoreLevel8").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
                 LoadScene("Levels3");
+        }
+
+        else if (collision.gameObject.name == "GoToLevels4Cube")
+        {
+            // Check that the GoToLevels2Cube has the ShowAd tag. This only exits in the Levels2 scene
+            if (collision.gameObject.tag == "ShowAd")
+            {
+                // 10% of the times, when the player dies, an ad is shown
+                // Get a random num from 1 to 10
+                System.Random random = new System.Random();
+                int randNum1 = random.Next(1, 10);
+
+                // If the random number is 1, which happens 10% of the times, show an ad
+                if (randNum1 < 2)
+                {
+                    // Show the interstitial ad
+                    AdManager.instance.ShowInterstitial();
+                }
+            }
+
+            // This is the page 3 of the levels scene
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel12").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Levels4");
         }
 
         // Levels
@@ -198,6 +227,41 @@ public class PlayerCollisionHandler : MonoBehaviour
             // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
             if (PlayerPrefs.GetFloat("highScoreLevel11").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
                 LoadScene("Level12");
+        }
+
+        else if (collision.gameObject.name == "GoToLevel13")
+        {
+            if (PlayerPrefs.GetFloat("highScoreLevel12").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+            {
+                LoadScene("Level13");
+                // This is the reached Level 13 achievement
+                PlayGames.UnlockAchievement("CgkInoKH190DEAIQFg");
+            }
+        }
+
+        else if (collision.gameObject.name == "GoToLevel14")
+        {
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel13").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level14");
+        }
+
+        else if (collision.gameObject.name == "GoToLevel15")
+        {
+            if (collision.gameObject.tag == "FinishCube")
+                // Show the interstitial ad
+                AdManager.instance.ShowInterstitial();
+
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel14").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level15");
+        }
+
+        else if (collision.gameObject.name == "GoToLevel16")
+        {
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel15").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level16");
         }
 
         else if (collision.gameObject.name == "LastLevelFinishCube")

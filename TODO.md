@@ -1,8 +1,10 @@
 ## TODO
 
-- Replace the about cube with the multiplayer cube []
-- Add multiplayer []
+### v0.3
+- Add a levels scence selector
+- Every 16 levels, change the theme (colors)
 
+### v0.2
 - Restrict level access if previous levels aren't completed [x]
 - Add more levels [x]
 - Make existing levels way easier [x]
@@ -13,3 +15,7 @@
 - Add google play games support [x]
 - Replace settings cube with leaderboard cube [x]
 - Add custom splash screen [x]
+
+### Maybe
+- Replace the about cube with the multiplayer cube []
+- Add multiplayer []
