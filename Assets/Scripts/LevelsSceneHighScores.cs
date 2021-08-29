@@ -37,6 +37,11 @@ public class LevelsSceneHighScores : MonoBehaviour
     public GameObject level15Cube;
     public GameObject level16Cube;
 
+    public GameObject levelsSelector1to4Cube;
+    public GameObject levelsSelector5to8Cube;
+    public GameObject levelsSelector9to12Cube;
+    public GameObject levelsSelector13to16Cube;
+
     public GameObject goToNextPageCube;
 
     public Material disabledColorMaterial;
@@ -105,6 +110,7 @@ public class LevelsSceneHighScores : MonoBehaviour
                 level6Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level7Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level8Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             // Check if the highScore for Level2 is == 0.0 If it is, then the level is incomplete
@@ -112,12 +118,14 @@ public class LevelsSceneHighScores : MonoBehaviour
             {
                 level7Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level8Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             // Check if the highScore for Level3 is == 0.0 If it is, then the level is incomplete
             else if (PlayerPrefs.GetFloat("highScoreLevel7").ToString("f1") == "0.0")
             {
                 level8Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             // Check if the highScore for Level4 is == 0.0 If it is, then the level is incomplete
@@ -145,6 +153,7 @@ public class LevelsSceneHighScores : MonoBehaviour
                 level10Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level11Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level12Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             // Check if the highScore for Level2 is == 0.0 If it is, then the level is incomplete
@@ -152,12 +161,14 @@ public class LevelsSceneHighScores : MonoBehaviour
             {
                 level11Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level12Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             // Check if the highScore for Level3 is == 0.0 If it is, then the level is incomplete
             else if (PlayerPrefs.GetFloat("highScoreLevel11").ToString("f1") == "0.0")
             {
                 level12Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             // Check if the highScore for Level4 is == 0.0 If it is, then the level is incomplete
@@ -185,6 +196,7 @@ public class LevelsSceneHighScores : MonoBehaviour
                 level14Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level15Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level16Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             // Check if the highScore for Level2 is == 0.0 If it is, then the level is incomplete
@@ -192,12 +204,14 @@ public class LevelsSceneHighScores : MonoBehaviour
             {
                 level15Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
                 level16Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             // Check if the highScore for Level3 is == 0.0 If it is, then the level is incomplete
             else if (PlayerPrefs.GetFloat("highScoreLevel15").ToString("f1") == "0.0")
             {
                 level16Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
             // Check if the highScore for Level4 is == 0.0 If it is, then the level is incomplete
@@ -206,6 +220,39 @@ public class LevelsSceneHighScores : MonoBehaviour
                 goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
             }
 
+        }
+
+        // This is for LevelsSelector1 Scene
+        else if (levelsSelector1to4Cube)
+        {
+            // This part is to check which levels the player can access, depending on the previous levels they have completed
+            // Check if the highScore for Level1 is == 0.0 If it is, then the level is incomplete
+            if (PlayerPrefs.GetFloat("highScoreLevel4").ToString("f1") == "0.0")
+            {
+                // We take all the cubes after the last incomplete level and set them to the disabled color
+                levelsSelector5to8Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                levelsSelector9to12Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                levelsSelector13to16Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+            }
+
+            else if (PlayerPrefs.GetFloat("highScoreLevel8").ToString("f1") == "0.0")
+            {
+                levelsSelector9to12Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                levelsSelector13to16Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+            }
+
+            else if (PlayerPrefs.GetFloat("highScoreLevel12").ToString("f1") == "0.0")
+            {
+                levelsSelector13to16Cube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+            }
+
+            else if (PlayerPrefs.GetFloat("highScoreLevel16").ToString("f1") == "0.0")
+            {
+                goToNextPageCube.GetComponent<MeshRenderer>().material = disabledColorMaterial;
+            }
         }
     }
 }

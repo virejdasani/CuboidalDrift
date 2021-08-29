@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Check if the y position of the player is lower than 2.5. This is required because at he start of each level, the player falls from a high y value. Without this, the player can move in air and get out of the map
-        if (rb.position.y < 2.5)
+        if (rb.position.y < 2.3)
         {
             // Based on JoyStick input, move the rigidbody (player)
             rb.velocity = new Vector3(
