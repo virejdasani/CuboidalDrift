@@ -3,6 +3,7 @@
 ### v0.3
 - Add a levels scence selector
 - Every 16 levels, change the theme (colors)
+- Add single player and offline tags to app in playstore listing
 
 ### v0.2
 - Restrict level access if previous levels aren't completed [x]

@@ -14,6 +14,11 @@ public class SettingsModalController : MonoBehaviour
         AudioListener.volume = 0;
     }
 
+    public void BackToLevels()
+    {
+        Initiate.Fade("LevelsSelector", Color.black, 3.0f);
+    }
+
     public void ExitGame()
     {
         Application.Quit();

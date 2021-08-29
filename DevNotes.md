@@ -8,11 +8,7 @@
 - To get proper lighting, go to window->rendering->lighting. Click new lighting settings and check the auto generate box
 - Add the leaderboard for that level from google play console. Then get the id and add it in `TimeScore.cs`
 - Add ads in the appropriate levels ending
-
-## Piston animation
-- Piston comes all the way out at 60 frames
-- Piston goes all the way back in at 180 frames
-- Takes 1 second to come out and 2 seconds to go back in
+- Make sure the correct last level is specified in PlayerCollisionHandler in the collision of player with 'LastLevelFinishCube'. This is needed so the player can't access the MoreLevelsComingSoon scene before all levels aren't complete 
 
 ## Movement speed
 - Touch movement speed = 600

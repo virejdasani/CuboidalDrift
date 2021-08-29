@@ -1,5 +1,4 @@
 using UnityEngine;
-using System;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 

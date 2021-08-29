@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System;
 
 public class PlayerCollisionHandler : MonoBehaviour
 {
@@ -266,7 +264,8 @@ public class PlayerCollisionHandler : MonoBehaviour
 
         else if (collision.gameObject.name == "LastLevelFinishCube")
         {
-            LoadScene("MoreLevelsComingSoon");
+            if (PlayerPrefs.GetFloat("highScoreLevel16").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("MoreLevelsComingSoon");
 
             // This is the Expert Gamer achievemnet. Unlocked when all levels are completed
             PlayGames.UnlockAchievement("CgkInoKH190DEAIQDw");
