@@ -2949,7 +2949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3107948164015844286, guid: 220cd2bebb94d48629f9a3757b7e1cb0, type: 3}
       propertyPath: m_Name
-      value: GoToLevel13
+      value: GoToLevels4Cube
       objectReference: {fileID: 0}
     - target: {fileID: 3107948164015844286, guid: 220cd2bebb94d48629f9a3757b7e1cb0, type: 3}
       propertyPath: m_TagString
