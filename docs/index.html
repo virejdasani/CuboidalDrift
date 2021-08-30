@@ -1,82 +1,191 @@
 <!DOCTYPE html>
-<html lang="en-US">
+
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
-  <title>Cuboidal Drift</title>
-  <meta name="generator" content="Jekyll v3.9.0" />
-  <meta property="og:title" content="Cuboidal Drift" />
-  <meta property="og:locale" content="en_US" />
-  <meta name="description" content="Cuboidal Drift" />
-  <meta property="og:description" content="Cuboidal Drift" />
-  <link rel="canonical" href="https://virejdasani.github.io/CuboidalDrift/" />
-  <meta property="og:url" content="https://virejdasani.github.io/CuboidalDrift/" />
-  <meta property="og:site_name" content="Cuboidal Drift" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Cuboidal Drift" />
-  <script type="application/ld+json">
-    {
-      "description": "Cuboidal Drift",
-      "url": "https://virejdasani.github.io/CuboidalDrift/",
-      "@type": "WebSite",
-      "headline": "Cuboidal Drift",
-      "name": "Cuboidal Drift",
-      "@context": "https://schema.org"
-    }
-  </script>
-  <!-- End Jekyll SEO tag -->
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <style>
-    head,
-    body {
-      background-color: white;
-    }
-  </style>
-  <!-- 
-  <link rel="shortcut icon" type="image/x-icon"
-    href="https://raw.githubusercontent.com/virejdasani/Geniemoji/master/assets/geniemojiLamp%404x.png" /> -->
+
+  <!-- Page title and Favicon -->
+  <title>Cuboidal Drift</title>
+  <link rel="icon" href="assets/appLogo.png" />
+
+  <!-- Primary Meta Tags -->
+  <title>Cuboidal Drift</title>
+  <meta name="title" content="Cuboidal Drift">
+  <meta name="description" content="Cuboidal Drift is a casual, open-source indie game made with Unity">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://virejdasani.github.io/CuboidalDrift/">
+  <meta property="og:title" content="Cuboidal Drift">
+  <meta property="og:description" content="Cuboidal Drift is a casual, open-source indie game made with Unity">
+  <meta property="og:image" content="https://virejdasani.github.io/CuboidalDrift/assets/appLogo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://virejdasani.github.io/CuboidalDrift/">
+  <meta property="twitter:title" content="Cuboidal Drift">
+  <meta property="twitter:description" content="Cuboidal Drift is a casual, open-source indie game made with Unity">
+  <meta property="twitter:image" content="https://virejdasani.github.io/CuboidalDrift/assets/appLogo.png">
+
+  <!-- Scripts -->
+  <script src="./scripts/smooth-scroll.js"></script>
+  <script src="./scripts/smooth-scroll-commands.js"></script>
 
 </head>
 
 <body>
-  <!-- <section class="page-header">
-    <h1 class="project-name">Cuboidal Drift</h1>
-    <h2 class="project-tagline">A casual, fun indie game</h2>
 
-    <a href="https://github.com/virejdasani/CuboidalDrift" class="btn">View on GitHub</a>
+  <!-- Used to setup downloads -->
+  <iframe id="invisible" style="display:none;"></iframe>
 
-    <a href="download.html" class="btn">Download Cuboidal Drift</a> -->
+  <!-- This is the sticky bar that moves with a scroll -->
+  <div id="sticky-bar">
+    <div id="sticky-bar-content">
+      <div class="backdrop"></div>
+      <div class="foreground">
+        <div id="sticky-bar-squeezer">
+          <a id="sticky-bar-home" href="javascript:;" onclick="return scrollToTop();">
+            <img src="./assets/appLogo.png" width="50px" height="50px">
+            <h4>Cuboidal Drift</h4>
+          </a>
 
-  </section>
+          <div id="sticky-bar-links">
 
-  <!-- <section class="main-content">
+            <!-- GitHub Sticky Link -->
+            <a href="https://github.com/virejdasani/CuboidalDrift" target="_blank">GitHub</a>
+            <div class="padding"></div>
 
-    <h1 id="">Cuboidal Drift</h1>
+            <!-- Download Sticky Link -->
+            <a href="https://github.com/virejdasani/CuboidalDrift/releases">Downloads</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/0_qvrFxAGY4" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
+  <div id="main-padding">
+    <!-- Contains all content including footer -->
+    <div class="main">
 
-    <footer class="site-footer">
-      <span class="site-footer-owner"><a href="https://github.com/virejdasani/CuboidalDrift">Cuboidal Drift</a> is
-        developed
-        and maintained by <a href="https://virejdasani.github.io/">Virej Dasani</a>.</span>
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                                Section 1                                -->
+      <!-- ----------------------------------------------------------------------- -->
+      <div id="section-1" class="section-alignment">
 
-      <span class="site-footer-owner"><a href="./PRIVACY_POLICY.html">Privacy Policy</a></span>
+        <!-- Top content -->
+        <img id="app-icon" src="./assets/appLogo.png">
+        <h2 id="landing-header">Cuboidal Drift</h2>
+        <h4 id="landing-subtitle">Cuboidal Drift is a casual, open-source indie game made with Unity</h4>
+        <div class="padding"></div>
 
-    </footer>
-  </section> -->
+        <iframe width="90%" height="380px" src="https://youtube.com/embed/0_qvrFxAGY4" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
 
-  <h3>Redirecting...</h3>
+        <div class="padding-semi-large"></div>
 
-  <script>
-    window.location = "https://virejdasani.itch.io/cuboidaldrift"
-  </script>
+        <!-- -------------------------- App store buttons -------------------------- -->
+
+        <div id="app-store-buttons">
+          <!-- Download button -->
+          <a class="button-standard"
+            href="https://play.google.com/store/apps/details?id=com.VirejDasani.CuboidalDrift">Download from the Google
+            PlayStore<img class="icon-link" src="./assets/icons/download-icon.svg"></a>
+        </div>
+
+        <!-- Indicators -->
+        <div id="indicators">
+
+          <div id="repo-links">
+            <!-- Releases -->
+            <a class="indicator" href="https://github.com/virejdasani/CuboidalDrift/releases"
+              target="_blank">Releases</a>
+
+            <p class="indicator indicator-separator">•</p>
+
+            <!-- Repository -->
+            <a class="indicator" href="https://github.com/virejdasani/CuboidalDrift" target="_blank">Repository</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="padding-large"></div>
+      <div class="padding-large"></div>
+      <div class="padding-small"></div>
+
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                                Section 2                                -->
+      <!-- ----------------------------------------------------------------------- -->
+      <div id="section-2">
+
+        <!-- How does it work -->
+        <div class="blurb">
+          <h3></h3>
+          <div class="padding-small"></div>
+          <span id="emoji-magnifying-glass" class="emoji"></span>
+        </div>
+
+
+        <div class="center-image">
+          <img id="image1" src="assets/image1.jpg">
+        </div>
+
+
+        <div class="center-image">
+          <img id="settings-window-image" src="assets/image2.jpg">
+        </div>
+
+
+        <div class="center-image">
+          <img id="settings-window-image" src="assets/image3.jpg">
+        </div>
+
+        <div class="center-image">
+          <img id="settings-window-image" src="assets/image4.jpg">
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- Still have questions? -->
+      <div class="padding-faq-block">
+        <h3 class="contact-us">Still have questions? <a href="mailto: dasanivirej@gmail.com" class="link">Get in
+            touch</a>. Got feedback or ideas for Cuboidal Drift? We're all ears! Come <a
+            href="https://github.com/virejdasani/CuboidalDrift/issues/new" class="link" target="_blank">share them
+            with
+            us</a>
+          over on Github.
+        </h3>
+      </div>
+
+
+      <!-- Footer -->
+      <div id="footer">
+
+        <hr id="footer-rule" class="remove-bottom-margin">
+
+        <!-- Contains icons, and text -->
+        <div id="footer-content">
+
+          <!-- Created by... -->
+          <p class="footer-font">Cuboidal Drift is developed and maintained by <a href="https://virejdasani.github.io"
+              class="link" target="_blank">Virej Dasani</a></p>
+          <!-- Copyright -->
+          <p class="footer-font">©2021</p>
+        </div>
+      </div>
+
+      <!-- Bottom padding -->
+      <div class="padding-bottom"></div>
+    </div>
+  </div>
 
 </body>
 
