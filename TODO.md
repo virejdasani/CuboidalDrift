@@ -1,11 +1,13 @@
 ## TODO
 
+### v0.4
+- Add notis to app for everytime a new update is available and for get players back
 - Every 16 levels, change the theme (colors)
 
 ### v0.3
 - Add a levels scence selector [x]
-- Add single player and offline tags to app in playstore listing
-- Add back to levels button in settings menu
+- Add single player and offline tags to app in playstore listing [x]
+- Add back to levels button in settings menu [x]
 
 ### v0.2
 - Restrict level access if previous levels aren't completed [x]
