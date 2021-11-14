@@ -1,3 +1,5 @@
+Note: this is not the latest version of Cuboidal Drift because the game became to heavy to push to GitHub
+
 # [CuboidalDrift](https://play.google.com/store/apps/details?id=com.VirejDasani.CuboidalDrift)
 A casual, fun, opensource indie game made with Unity
 
