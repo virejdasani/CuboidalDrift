@@ -1,4 +1,4 @@
-Note: this is not the latest version of Cuboidal Drift because the game became to heavy to push to GitHub
+Note: this is not the latest version of Cuboidal Drift because the game became to heavy to push to GitHub it is now on gitlab
 
 # [CuboidalDrift](https://play.google.com/store/apps/details?id=com.VirejDasani.CuboidalDrift)
 A casual, fun, opensource indie game made with Unity
