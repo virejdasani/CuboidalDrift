@@ -19,6 +19,8 @@ public class LevelsSceneHighScores : MonoBehaviour
     public TextMeshPro level14HighScoreText;
     public TextMeshPro level15HighScoreText;
     public TextMeshPro level16HighScoreText;
+    public TextMeshPro level17HighScoreText;
+    public TextMeshPro level18HighScoreText;
 
     public GameObject level1Cube;
     public GameObject level2Cube;
@@ -36,6 +38,8 @@ public class LevelsSceneHighScores : MonoBehaviour
     public GameObject level14Cube;
     public GameObject level15Cube;
     public GameObject level16Cube;
+    public GameObject level17Cube;
+    public GameObject level18Cube;
 
     public GameObject levelsSelector1to4Cube;
     public GameObject levelsSelector5to8Cube;

@@ -3,17 +3,23 @@ using UnityEngine;
 public class PlayerCollisionHandler : MonoBehaviour
 {
     protected Rigidbody rb;
+    protected BoxCollider bc;
 
     // This is the transition time when changing scenes (Faster this number = less time for transition)
     public float fadeSpeed = 2.0f;
 
     public GameObject AboutModal;
     public GameObject SettingsModal;
+    public PhysicMaterial bouncyMaterial;
+    public PhysicMaterial frictionlessMaterial;
 
     void Start()
     {
         // Get the rigidbody
         rb = GetComponent<Rigidbody>();
+
+        //Get the boxcollider
+        bc = GetComponent<BoxCollider>();
 
         // If about modal exists in this scene
         if (AboutModal)
@@ -262,6 +268,20 @@ public class PlayerCollisionHandler : MonoBehaviour
                 LoadScene("Level16");
         }
 
+        else if (collision.gameObject.name == "GoToLevel17")
+        {
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel16").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level17");
+        }
+
+        else if (collision.gameObject.name == "GoToLevel18")
+        {
+            // Check if the previous level has a highscore greater than 0.0. This means that level was completed. If this is true, they can access this level
+            if (PlayerPrefs.GetFloat("highScoreLevel17").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
+                LoadScene("Level18");
+        }
+
         else if (collision.gameObject.name == "LastLevelFinishCube")
         {
             if (PlayerPrefs.GetFloat("highScoreLevel16").ToString("f1") != "0.0" || collision.gameObject.tag == "FinishCube")
@@ -292,6 +312,10 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             // Show the leaderboard ui
             PlayGames.ShowLeaderboard();
+        }
+        else if (collision.gameObject.name == "JumpGround")
+        {
+            bc.material = bouncyMaterial;
         }
     }
 
